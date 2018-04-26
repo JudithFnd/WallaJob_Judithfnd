@@ -38,10 +38,6 @@
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/colors/red.css') }}" media="screen" />
     
-
-
-
-
     
   </head>
 
@@ -136,7 +132,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
                   <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-                  <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
+                  <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
               </div>                           
             </div>
