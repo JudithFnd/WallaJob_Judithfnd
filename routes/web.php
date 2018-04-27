@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'IndexController@index');
-// Route::get('/', 'MyAccountController@myAccount');
+Route::get('/login', 'MyAccountController@myAccount');

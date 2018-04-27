@@ -9,10 +9,6 @@ class MyAccountController extends Controller
 {
     public function myAccount()
     {
-        $company = Company::find(1);
-        
-        //dump($company);
-        
 
         return view('my-account');
     }
