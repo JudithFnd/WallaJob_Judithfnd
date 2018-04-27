@@ -38,7 +38,9 @@
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/colors/red.css') }}" media="screen" />
     
-
+    <!-- ReCaptcha  -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
 
   </head>
 
@@ -372,7 +374,8 @@
                     <h1>Sign Up</h1>
                     <p>Please fill in this form to create an account.</p>
                     <hr>
-                
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
                 
@@ -387,7 +390,7 @@
                     </label>
                     
                     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                
+                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
                     <div class="clearfix">
                       <button type="button" class="btn btn-common btn-large">Cancel</button>
                       <button type="submit" class="btn btn-common btn-large">Sign Up</button>
@@ -515,6 +518,7 @@
     <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
+
       
   </body>
 </html>
