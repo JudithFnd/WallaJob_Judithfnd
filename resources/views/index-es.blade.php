@@ -56,7 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand logo" href="{{ asset('/') }}"><img src="assets/img/logo.png" alt=""></a>
+                  <a class="navbar-brand logo" href="{{ asset('/') }}"><img src="{{ asset('img/logo.png') }}" alt=""></a>
                   <a class="navbar-brand logo" style="width: 7%;" href="{{ asset('/') }}"><h3>WallaJob</h3></a>
                 </div>
 
@@ -261,7 +261,7 @@
           <div class="col-md-12">
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src="assets/img/jobs/img-1.jpg" alt=""></a>
+                <a href="job-details.html"><img src="{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
                 <h4><a href="job-details.html">Diseñador Web</a><span class="full-time">Tiempo Completo</span></h4>
@@ -285,7 +285,7 @@
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src="assets/img/jobs/img-2.jpg" alt=""></a>
+                <a href="job-details.html"><img src="{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
                 <h4><a href="job-details.html">Desarrollador de Front-End</a><span class="full-time">Tiempo Completo</span></h4>
@@ -309,7 +309,7 @@
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src="assets/img/jobs/img-3.jpg" alt=""></a>
+                <a href="job-details.html"><img src="{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
                 <h4><a href="job-details.html">Contador Senior</a><span class="part-time">Tiempo Partido</span></h4>
@@ -333,7 +333,7 @@
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src="assets/img/jobs/img-4.jpg" alt=""></a>
+                <a href="job-details.html"><img src="{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
                 <h4><a href="job-details.html">Desarrollador web Fullstack </a><span class="full-time">Tiempo Completo</span></h4>
@@ -385,7 +385,7 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src="assets/img/logo.png" class="img-responsive" alt="Footer Logo"></h3>
+                <h3 class="block-title"><img src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
                 <div class="textwidget">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
                 </div>
