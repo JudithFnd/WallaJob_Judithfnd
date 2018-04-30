@@ -13,3 +13,7 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/login', 'MyAccountController@myAccount');
+Route::get('/bookmarked', 'Bookmarked@bookmarked');
+Route::get('/change-password', 'ChangePassword@changePassword');
+Route::get('/contact', 'Contact@contact');
+Route::get('/faq', 'Faq@faq');
