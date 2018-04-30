@@ -446,7 +446,7 @@
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="{{ asset('/contact') }}">Contact</a></li>
                 </ul>
     					</div>
     				</div>
