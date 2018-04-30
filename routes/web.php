@@ -17,3 +17,7 @@ Route::get('/about', 'AboutController@about');
 Route::get('/privacyPolicy', 'PrivacyPolicyController@privacyPolicy');
 Route::get('/indexEs', 'IndexEsController@indexEs');
 Route::get('/indexCa', 'IndexCaController@indexCa');
+Route::get('/bookmarked', 'Bookmarked@bookmarked');
+Route::get('/change-password', 'ChangePassword@changePassword');
+Route::get('/contact', 'Contact@contact');
+Route::get('/faq', 'Faq@faq');
