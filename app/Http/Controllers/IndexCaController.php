@@ -9,6 +9,6 @@ class IndexCaController extends Controller
 {
     public function indexCa()
     {
-        return view('index-ca');
+        return view('index-cat');
     }
 }
