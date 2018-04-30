@@ -37,17 +37,24 @@
 
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/colors/red.css') }}" media="screen" />
-    
-    <!-- ReCaptcha  -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+      
 
-  </head>
+    <!-- Google Maps -->
+    <style>
+      #google-map,
+      body,
+      html {
+        padding: 0;
+        height: 460px;
+      }
+    </style>
 
-  <body>  
+    </head>
+
+    <body>  
       <!-- Header Section Start -->
       <div class="header">    
-        <div class="logo-menu">
+        <div class="header-banner">
           <nav class="navbar navbar-default main-navigation" role="navigation" data-spy="affix" data-offset-top="50">
             <div class="container">
               <!-- Brand and toggle get grouped for better mobile display -->
@@ -93,7 +100,7 @@
                     </a>
                     <ul class="dropdown">
                       <li>
-                        <a class="active" href="about.html">
+                        <a href="about.html">
                         About
                         </a>
                       </li>
@@ -128,7 +135,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="contact.html">
+                        <a class="active" href="contact.html">
                         Contact
                         </a>
                       </li>
@@ -235,7 +242,7 @@
                 </ul>                       
               </li>
               <li>
-                <a href="about.html">Pages</a>
+                <a class="active" href="about.html">Pages</a>
                 <ul>
                   <li><a href="about.html">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
@@ -244,7 +251,7 @@
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                   <li><a href="faq.html">FAQ</a></li>
                   <li><a href="pricing.html">Pricing Tables</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a class="active" href="contact.html">Contact</a></li>
                 </ul>
               </li>
               <li>
@@ -276,7 +283,7 @@
                 </ul>
               </li>  
               <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-              <li class="btn-m"><a  class="active" href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+              <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
             </ul>
             <!-- Mobile Menu End --> 
           </nav>
@@ -315,97 +322,111 @@
           <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
             <p><i class="ti-files"></i> All Pages</p>
           </div>
-        </div>
       </div>
       <!-- Header Section End -->  
-
-      <!-- Page Header Start -->
-      <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    
+      <!-- Start Map Section -->
+      <div id="google-map"></div>
+      <!-- End Map Section -->
+      
+      <!-- Start Contact Us Section -->
+      <section id="content">
         <div class="container">
-          <div class="row">         
-            <div class="col-md-12">
-              <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My Account</h2>
-                <ol class="breadcrumb">
-                  <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My Account</li>
-                </ol>
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="medium-title">
+                Contact Us
+              </h2>
+              <div class="information">
+                <div class="contact-datails">
+                  <div class="icon">
+                    <i class="ti-location-pin"></i>
+                  </div>
+                  <div class="info">
+                    <h3>Address</h3>
+                    <span class="detail">Main Office: NO.22-23 Street Name- City,Country</span>
+                    <span class="datail">Customer Center: NO.130-45 Streen Name- City, Country</span>
+                  </div>
+                </div>                
+                <div class="contact-datails">
+                  <div class="icon">
+                    <i class="ti-mobile"></i>
+                  </div>
+                  <div class="info">
+                    <h3>Phone Numbers</h3>
+                    <span class="detail">Main Office: +880 123 456 789</span>
+                    <span class="datail">Customer Supprort: +880 123 456 789 </span>
+                  </div>
+                </div>
+                <div class="contact-datails">
+                  <div class="icon">
+                    <i class="ti-location-arrow"></i>
+                  </div>
+                  <div class="info">
+                    <h3>Email Address</h3>
+                    <span class="detail">Customer 
+                    Support: info@mail.com</span>
+                    <span class="detail">Technical Support: support@mail.com</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="col-md-8">
+              <!-- Form -->
+              <form id="contactForm" class="contact-form" data-toggle="validator">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required data-error="Please enter your name">
+                          <div class="help-block with-errors"></div>
+                        </div>                    
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">                      
+                          <input type="email" class="form-control" id="email" placeholder="mail@sitename.com" required data-error="Please enter your email">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group"> 
+                          <textarea class="form-control" placeholder="Massage" rows="11" data-error="Write your message" required></textarea>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" id="submit" class="btn btn-common">Send Us</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                        <div class="clearfix"></div>   
+                      </div>
+                    </div>
+                  </div>                     
+                </div> 
+              </form>
+            </div>            
           </div>
         </div>
-      </div>
-      <!-- Page Header End -->   
+      </section>
+      <!-- End Contact Us Section  -->
 
       <section class="section text-center" >
       <div class="container">
                 <!-- Start Animations Text -->
+                <h1>
 
-                
-
-                <form id="form_login" action="/action_page.php">
-                  <h1>Login</h1>
-                  <p>Please fill in this form to login.</p>
-                  <hr>
-                  <div class="imgcontainer">
-                  </div>
-
-                  <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                    <button type="submit" class="btn btn-common btn-large">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                  </div>
-
-                  <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                  </div>
-                </form>
-              
+                    You are using Free Lite version of Job Board<br> Purchase Full version to Get all Pages and Features
+                </h1>
+              <br>
                 <!-- End Animations Text -->
-                <form  id="form_sign" action="/action_page.php" style="border:1px solid #ccc">
-                  <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                    </label>
-                    
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
-                    <div class="clearfix">
-                      <button type="button" class="btn btn-common btn-large">Cancel</button>
-                      <button type="submit" class="btn btn-common btn-large">Sign Up</button>
-                    </div>
-                  </div>
-                </form>
+
                 <!-- Start Buttons -->
-                
+                <a rel="nofollow" target="_blank" href="https://rebrand.ly/gg-jobboard-purchase" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Purchase Now</a>
         </div>
       </div>
-    </section>  
-
-     
-
-          <!-- Footer Section Start -->
+    </section>    
+    
+    <!-- Footer Section Start -->
     <footer>
     	<!-- Footer Area Start -->
     	<section class="footer-Content">
@@ -502,23 +523,160 @@
       </div>
         
     <!-- Main JS  -->
-    <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
-    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>    
-    <script type="text/javascript" src="{{ asset('js/material.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/material-kit.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.parallax.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.slicknav.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jasny-bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/form-validator.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
-    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>      
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/js/material.min.js"></script>
+    <script type="text/javascript" src="assets/js/material-kit.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.slicknav.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/js/form-validator.min.js"></script>
+    <script type="text/javascript" src="assets/js/contact-form-script.js"></script>    
+    <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
 
+      <!-- Google Maps API -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHo_WtZ2nIYCgCLf7sINZaqcrpqSDio9o"></script>
+      <!-- Google Maps JS Only for Contact Pages -->
+      <script type="text/javascript">
+      var map;
+      var defult = new google.maps.LatLng(23.749574, 90.396594,15);
+      var mapCoordinates = new google.maps.LatLng(23.749574, 90.396594,15); 
       
+      var markers = [];
+      var image = new google.maps.MarkerImage(
+        'assets/img/map-marker.png',
+        new google.maps.Size(84, 70),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(60, 60)
+      );
+      
+      function addMarker() {
+        markers.push(new google.maps.Marker({
+          position: defult,
+          raiseOnDrag: false,
+          icon: image,
+          map: map,
+          draggable: false
+        }
+      ));
+        
+      }
+      
+      function initialize() {
+        var mapOptions = {
+          backgroundColor: "#ffffff",
+          zoom: 14,
+          disableDefaultUI: true,
+          center: mapCoordinates,
+          zoomControl: false,
+          scaleControl: false,
+          scrollwheel: false,
+          disableDoubleClickZoom: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [{
+            "featureType": "landscape.natural",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#ffffff"
+            }
+                       ]
+          }
+                   , {
+                     "featureType": "landscape.man_made",
+                     "stylers": [{
+                       "color": "#ffffff"
+                     }
+                                 , {
+                                   "visibility": "off"
+                                 }
+                                ]
+                   }
+                   , {
+                     "featureType": "water",
+                     "stylers": [{
+                       "color": "#80C8E5"
+                     }
+                                 , {
+                                   "saturation": 0
+                                 }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.arterial",
+                     "elementType": "geometry",
+                     "stylers": [{
+                       "color": "#999999"
+                     }
+                                ]
+                   }
+                   , {
+                     "elementType": "labels.text.stroke",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   , {
+                     "elementType": "labels.text",
+                     "stylers": [{
+                       "color": "#333333"
+                     }
+                                ]
+                   }
+                   
+                   , {
+                     "featureType": "road.local",
+                     "stylers": [{
+                       "color": "#dedede"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.local",
+                     "elementType": "labels.text",
+                     "stylers": [{
+                       "color": "#666666"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "transit.station.bus",
+                     "stylers": [{
+                       "saturation": -57
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.highway",
+                     "elementType": "labels.icon",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "poi",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   
+                  ]
+          
+        }
+            ;
+        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+        addMarker();
+        
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </body>
 </html>

@@ -38,10 +38,6 @@
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/colors/red.css') }}" media="screen" />
     
-    <!-- ReCaptcha  -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
-
   </head>
 
   <body>  
@@ -64,7 +60,7 @@
 
               <div class="collapse navbar-collapse" id="navbar">              
                  <!-- Start Navigation List -->
-                 <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
                   <li>
                     <a href="index.html">
                     Home <i class="fa fa-angle-down"></i>
@@ -235,9 +231,9 @@
                 </ul>                       
               </li>
               <li>
-                <a href="about.html">Pages</a>
+                <a class="active" href="about.html">Pages</a>
                 <ul>
-                  <li><a href="about.html">About</a></li>
+                  <li><a class="active" href="about.html">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
                   <li><a href="job-details.html">Job Details</a></li>
                   <li><a href="resume.html">Resume Page</a></li>
@@ -268,7 +264,7 @@
               </li> 
               <li>
                 <a href="blog.html">Blog</a>
-                <ul class="dropdown">
+                <ul>
                   <li><a href="blog.html">Blog - Right Sidebar</a></li>
                   <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
                   <li><a href="blog-full-width.html">Blog - Full Width</a></li>
@@ -276,9 +272,9 @@
                 </ul>
               </li>  
               <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-              <li class="btn-m"><a  class="active" href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+              <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
             </ul>
-            <!-- Mobile Menu End --> 
+            <!-- Mobile Menu End -->  
           </nav>
 
           <!-- Off Canvas Navigation -->
@@ -325,85 +321,167 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My Account</h2>
+                <h2 class="product-title">About Us</h2>
                 <ol class="breadcrumb">
                   <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My Account</li>
+                  <li class="current">About Us</li>
                 </ol>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Page Header End -->   
+      <!-- Page Header End -->        
 
-      <section class="section text-center" >
-      <div class="container">
-                <!-- Start Animations Text -->
-
-                
-
-                <form id="form_login" action="/action_page.php">
-                  <h1>Login</h1>
-                  <p>Please fill in this form to login.</p>
-                  <hr>
-                  <div class="imgcontainer">
-                  </div>
-
-                  <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                    <button type="submit" class="btn btn-common btn-large">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                  </div>
-
-                  <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                  </div>
-                </form>
-              
-                <!-- End Animations Text -->
-                <form  id="form_sign" action="/action_page.php" style="border:1px solid #ccc">
-                  <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                    </label>
-                    
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
-                    <div class="clearfix">
-                      <button type="button" class="btn btn-common btn-large">Cancel</button>
-                      <button type="submit" class="btn btn-common btn-large">Sign Up</button>
-                    </div>
-                  </div>
-                </form>
-                <!-- Start Buttons -->
-                
+      <!-- Main container Start -->  
+      <div class="about section">
+        <div class="container">
+          <div class="row">          
+            <div class="col-md-6 col-sm-12">
+              <img src="assets/img/about/img1.jpg" alt="">              
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="about-content">
+                <h2 class="medium-title">About Job Career</h2>
+                <p class="desc">Consectuture adipiscing elit sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat utwisi veniam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est modi, saepe hic esse maxime quasi, sapiente ex debitis quis dolorum unde, neque quibusdam eveniet nobis enim porro repudiandae nesciunt quidem.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni delectus soluta adipisci beatae ullam quisquam, quia recusandae rem assumenda, praesentium porro sequi eaque doloremque tenetur incidunt officiis explicabo optio perferendis.</p>
+                <a href="#" class="btn btn-common">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>  
+      <!-- Main container End -->  
+      
+      <!-- Service  Section -->
+      <section id="service-main" class="section">
+        <!-- Container Starts -->
+        <div class="container">
+          <h1 class="section-title text-center">
+           Smart & Easy Place for job Seeker Poster & Recruters
+          </h1> 
+          <div class="row">        
+            <div class="col-sm-6 col-md-4">
+              <div class="service-item">
+                <div class="icon-wrapper">
+                  <i class="ti-search">
+                  </i>
+                </div>
+                <h2>
+                  Search Miloins of jobs
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eligendi consequuntur assumenda perferendis natus dolorem facere mollitia eius.
+                </p>
+              </div>
+              <!-- Service-Block-1 Item Ends -->
+            </div>
 
-     
+            <div class="col-sm-6 col-md-4">
+              <!-- Service-Block-1 Item Starts -->
+              <div class="service-item">
+                <div class="icon-wrapper">
+                  <i class="ti-world">
+                  </i>
+                </div>
+                <h2>
+                  Location Base Search
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eligendi consequuntur assumenda perferendis natus dolorem facere mollitia eius.
+                </p>
+              </div>             
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="service-item">
+                <div class="icon-wrapper">
+                  <i class="ti-stats-up">
+                  </i>
+                </div>
+                <h2>
+                  Top Careers
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eligendi consequuntur assumenda perferendis natus dolorem facere mollitia eius.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Service Main Section Ends -->
+
+      <!-- Testimonial Section Start -->
+      <section id="testimonial" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="touch-slider" class="owl-carousel owl-theme">
+              <div class="item active text-center">  
+                <img class="img-member" src="assets/img/testimonial/img1.jpg" alt=""> 
+                <div class="client-info">
+                 <h2 class="client-name">"John Smith  <span>(Project Menager)</span></h2>
+                </div>
+                <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
+              </div>
+              <div class="item text-center">
+                <img class="img-member" src="assets/img/testimonial/img2.jpg" alt=""> 
+                <div class="client-info">
+                 <h2 class="client-name">"John Smith  <span>(Project Menager)</span></h2>
+                </div>
+                <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
+              </div>
+              <div class="item text-center">
+                <img class="img-member" src="assets/img/testimonial/img3.jpg" alt=""> 
+                <div class="client-info">
+                  <h2 class="client-name">" Quan Ngyen <span>(Electricity Engineer)</span></h2>
+                </div>
+                <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial Section End -->
+
+      <!-- Clients Section -->
+      <section class="clients section">
+        <div class="container">
+          <h2 class="section-title">
+            Clients & Partners
+          </h2>
+          <div class="row"> 
+            <div id="clients-scroller">
+              <div class="items">
+                <img src="assets/img/clients/img1.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img2.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img3.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img4.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img5.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img6.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img6.png" alt="">
+              </div>
+              <div class="items">
+                <img src="assets/img/clients/img6.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Client Section End --> 
 
           <!-- Footer Section Start -->
     <footer>
@@ -518,7 +596,6 @@
     <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
-
       
   </body>
 </html>

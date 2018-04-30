@@ -7,7 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="author" content="Jobboard">
     
-    <title>WallaJob</title>    
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>    
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
@@ -38,10 +38,6 @@
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/colors/red.css') }}" media="screen" />
     
-    <!-- ReCaptcha  -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
-
   </head>
 
   <body>  
@@ -93,7 +89,7 @@
                     </a>
                     <ul class="dropdown">
                       <li>
-                        <a class="active" href="about.html">
+                        <a href="about.html">
                         About
                         </a>
                       </li>
@@ -118,7 +114,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="faq.html">
+                        <a class="active" href="faq.html">
                         FAQ
                         </a>
                       </li>
@@ -235,14 +231,14 @@
                 </ul>                       
               </li>
               <li>
-                <a href="about.html">Pages</a>
+                <a class="active" href="about.html">Pages</a>
                 <ul>
                   <li><a href="about.html">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
                   <li><a href="job-details.html">Job Details</a></li>
                   <li><a href="resume.html">Resume Page</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a class="active" href="faq.html">FAQ</a></li>
                   <li><a href="pricing.html">Pricing Tables</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -276,7 +272,7 @@
                 </ul>
               </li>  
               <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-              <li class="btn-m"><a  class="active" href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+              <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
             </ul>
             <!-- Mobile Menu End --> 
           </nav>
@@ -315,7 +311,6 @@
           <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
             <p><i class="ti-files"></i> All Pages</p>
           </div>
-        </div>
       </div>
       <!-- Header Section End -->  
 
@@ -325,85 +320,33 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My Account</h2>
+                <h2 class="product-title">FAQ</h2>
                 <ol class="breadcrumb">
                   <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My Account</li>
+                  <li class="current">Faq</li>
                 </ol>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Page Header End -->   
+      <!-- Page Header End --> 
 
       <section class="section text-center" >
       <div class="container">
                 <!-- Start Animations Text -->
+                <h1>
 
-                
-
-                <form id="form_login" action="/action_page.php">
-                  <h1>Login</h1>
-                  <p>Please fill in this form to login.</p>
-                  <hr>
-                  <div class="imgcontainer">
-                  </div>
-
-                  <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                    <button type="submit" class="btn btn-common btn-large">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                  </div>
-
-                  <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                  </div>
-                </form>
-              
+                    You are using Free Lite version of Job Board<br> Purchase Full version to Get all Pages and Features
+                </h1>
+              <br>
                 <!-- End Animations Text -->
-                <form  id="form_sign" action="/action_page.php" style="border:1px solid #ccc">
-                  <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                    </label>
-                    
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
-                    <div class="clearfix">
-                      <button type="button" class="btn btn-common btn-large">Cancel</button>
-                      <button type="submit" class="btn btn-common btn-large">Sign Up</button>
-                    </div>
-                  </div>
-                </form>
+
                 <!-- Start Buttons -->
-                
+                <a rel="nofollow" target="_blank" href="https://rebrand.ly/gg-jobboard-purchase" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Purchase Now</a>
         </div>
       </div>
-    </section>  
-
-     
+    </section>
 
           <!-- Footer Section Start -->
     <footer>
