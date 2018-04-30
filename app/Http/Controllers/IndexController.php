@@ -9,11 +9,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $company = Company::find(1);
-        
-        //dump($company);
-        
-
-        return view('index');
+       return view('index');
     }
 }

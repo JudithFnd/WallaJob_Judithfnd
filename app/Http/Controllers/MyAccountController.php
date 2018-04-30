@@ -9,7 +9,6 @@ class MyAccountController extends Controller
 {
     public function myAccount()
     {
-
         return view('my-account');
     }
 }
