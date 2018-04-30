@@ -21,3 +21,6 @@ Route::get('/bookmarked', 'Bookmarked@bookmarked');
 Route::get('/change-password', 'ChangePassword@changePassword');
 Route::get('/contact', 'ContactController@contact');
 Route::get('/faq', 'Faq@faq');
+Route::get('/privacyPolicy', 'PrivacyPolicyController@privacyPolicy');
+Route::get('/indexEs', 'IndexEsController@indexEs');
+Route::get('/indexCa', 'IndexCaController@indexCa');
