@@ -54,7 +54,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="{{ asset('/') }}"><img src="assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand logo" href="{{ asset('/') }}"><img src= "{{ asset('img/logo.png') }}" alt=""></a>
                 <a class="navbar-brand logo" style="width: 7%;" href="{{ asset('/') }}"><h3>WallaJob</h3></a>
               </div>
 
@@ -63,7 +63,50 @@
                  <ul class="nav navbar-nav">
                   <li>
                     <a href="{{ asset('/') }}">
-                    Home <i class="fa fa-angle-down"></i>
+                    Home <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="active" href="{{ asset('/about') }}">
+                    WallaJob <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="{{ asset('/about') }}">
+                        About
+                        </a>
+                      </li>
+                      <li>
+                        <a class="active" href="{{ asset('/privacyPolicy') }}">
+                        Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ asset('/faq') }}">
+                        FAQ
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ asset('/contact') }}">
+                        Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <a href="#">
+                    Offers <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Freelancer <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ asset('/') }}">
+                      <i class="fa fa-globe" style="font-size:18px"></i>
                     </a>
                     <ul class="dropdown">
                       <li>
@@ -83,141 +126,13 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a class="active" href="{{ asset('/about') }}">
-                    Pages <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="{{ asset('/about') }}">
-                        About
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-page.html">
-                        Job Page
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-details.html">
-                        Job Details
-                        </a>
-                      </li>
-                      <li>
-                        <a href="resume.html">
-                        Resume Page
-                        </a>
-                      </li>
-                      <li>
-                        <a class="active" href="{{ asset('/privacyPolicy') }}">
-                        Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="{{ asset('/faq') }}">
-                        FAQ
-                        </a>
-                      </li>
-                      <li>
-                        <a href="pricing.html">
-                        Pricing Tables
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact.html">
-                        Contact
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                    Candidates <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="browse-jobs.html">
-                        Browse Jobs
-                        </a>
-                      </li>
-                      <li>
-                        <a href="browse-categories.html">
-                        Browse Categories
-                        </a>
-                      </li>
-                      <li>
-                        <a href="add-resume.html">
-                        Add Resume
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-resumes.html">
-                        Manage Resumes
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-alerts.html">
-                        Job Alerts
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                    Employers <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="post-job.html">
-                        Add Job
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-jobs.html">
-                        Manage Jobs
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-applications.html">
-                        Manage Applications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="browse-resumes.html">
-                        Browse Resumes
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="blog.html">
-                    Blog <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="blog.html">
-                        Blog - Right Sidebar
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-left-sidebar.html">
-                        Blog - Left Sidebar
-                        </a>
-                      </li>
-                      <li><a href="blog-full-width.html">Blog - Full Width</a></li>
-                      <li>
-                        <a href="single-post.html">
-                        Blog Single Post
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
                   <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-                  <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
+                  <!-- <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li> -->
+                  <li class="right"><a href="{{ asset('/login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
-              </div>
+              </div>                           
             </div>
             <!-- Mobile Menu Start -->
             <ul class="wpb-mobile-menu">
@@ -356,7 +271,7 @@
     			<div class="row">
     				<div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src="assets/img/logo.png" class="img-responsive" alt="Footer Logo"></h3>
+                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
                 <div class="textwidget">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
                 </div>
