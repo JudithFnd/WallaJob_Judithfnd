@@ -54,16 +54,59 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="{{ asset('/') }}"><img src="assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand logo" href="{{ asset('/') }}">  <img src= "{{ asset('img/logo.png') }}" alt=""></a>
                 <a class="navbar-brand logo" style="width: 7%;" href="{{ asset('/') }}"><h3>WallaJob</h3></a>
               </div>
 
               <div class="collapse navbar-collapse" id="navbar">              
                  <!-- Start Navigation List -->
-                <ul class="nav navbar-nav">
+                 <ul class="nav navbar-nav">
                   <li>
                     <a href="{{ asset('/') }}">
-                    Home <i class="fa fa-angle-down"></i>
+                    Home <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="active" href="{{ asset('/about') }}">
+                    WallaJob <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a class="active" href="{{ asset('/about') }}">
+                        About
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ asset('/privacyPolicy') }}">
+                        Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ asset('/faq') }}">
+                        FAQ
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{ asset('/contact') }}">
+                        Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <a href="#">
+                    Offers <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Freelancer <i class="fa fa-angle"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ asset('/') }}">
+                      <i class="fa fa-globe" style="font-size:18px"></i>
                     </a>
                     <ul class="dropdown">
                       <li>
@@ -83,141 +126,13 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a class="active" href="{{ asset('/about') }}">
-                    Pages <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a class="active" href="{{ asset('/about') }}">
-                        About
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-page.html">
-                        Job Page
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-details.html">
-                        Job Details
-                        </a>
-                      </li>
-                      <li>
-                        <a href="resume.html">
-                        Resume Page
-                        </a>
-                      </li>
-                      <li>
-                        <a href="{{ asset('/privacyPolicy') }}">
-                        Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="{{ asset('/faq') }}">
-                        FAQ
-                        </a>
-                      </li>
-                      <li>
-                        <a href="pricing.html">
-                        Pricing Tables
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact.html">
-                        Contact
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                    Candidates <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="browse-jobs.html">
-                        Browse Jobs
-                        </a>
-                      </li>
-                      <li>
-                        <a href="browse-categories.html">
-                        Browse Categories
-                        </a>
-                      </li>
-                      <li>
-                        <a href="add-resume.html">
-                        Add Resume
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-resumes.html">
-                        Manage Resumes
-                        </a>
-                      </li>
-                      <li>
-                        <a href="job-alerts.html">
-                        Job Alerts
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                    Employers <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="post-job.html">
-                        Add Job
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-jobs.html">
-                        Manage Jobs
-                        </a>
-                      </li>
-                      <li>
-                        <a href="manage-applications.html">
-                        Manage Applications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="browse-resumes.html">
-                        Browse Resumes
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="blog.html">
-                    Blog <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="blog.html">
-                        Blog - Right Sidebar
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-left-sidebar.html">
-                        Blog - Left Sidebar
-                        </a>
-                      </li>
-                      <li><a href="blog-full-width.html">Blog - Full Width</a></li>
-                      <li>
-                        <a href="single-post.html">
-                        Blog Single Post
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
                   <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-                  <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
+                  <!-- <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li> -->
+                  <li class="right"><a href="{{ asset('/login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
-              </div>
+              </div>                           
             </div>
             <!-- Mobile Menu Start -->
             <ul class="wpb-mobile-menu">
@@ -277,40 +192,7 @@
             <!-- Mobile Menu End -->  
           </nav>
 
-          <!-- Off Canvas Navigation -->
-          <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
-          <!--- Off Canvas Side Menu -->
-            <div class="close" data-toggle="offcanvas" data-target=".navmenu">
-                <i class="ti-close"></i>
-            </div>
-            <h3 class="title-menu">All Pages</h3>
-            <ul class="nav navmenu-nav">
-              <li><a href="{{ asset('/') }}">English</a></li>
-              <li><a href="{{ asset('/indexEs') }}">Spanish</a></li>
-              <li><a href="{{ asset('/indexCa') }}">Catalan</a></li>
-              <li><a href="{{ asset('/about') }}">About us</a></li>            
-              <li><a href="job-page.html">Job Page</a></li>             
-              <li><a href="job-details.html">Job Details</a></li>    
-              <li><a href="resume.html">Resume Page</a></li> 
-              <li><a href="{{ asset('/privacyPolicy') }}">Privacy Policy</a></li>
-              <li><a href="pricing.html">Pricing Tables</a></li>
-              <li><a href="browse-jobs.html">Browse Jobs</a></li>
-              <li><a href="browse-categories.html">Browse Categories</a></li>
-              <li><a href="add-resume.html">Add Resume</a></li>
-              <li><a href="manage-resumes.html">Manage Resumes</a></li> 
-              <li><a href="job-alerts.html">Job Alerts</a></li> 
-              <li><a href="post-job.html">Add Job</a></li>  
-              <li><a href="manage-jobs.html">Manage Jobs</a></li>
-              <li><a href="manage-applications.html">Manage Applications</a></li>
-              <li><a href="browse-resumes.html">Browse Resumes</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="{{ asset('/faq') }}">Faq</a></li>
-              <li><a href="my-account.html">Login</a></li>
-              </ul><!--- End Menu -->
-          </div> <!--- End Off Canvas Side Menu -->
-          <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
-            <p><i class="ti-files"></i> All Pages</p>
-          </div>
+          
         </div>
       </div>
       <!-- Header Section End -->  
@@ -338,7 +220,7 @@
         <div class="container">
           <div class="row">          
             <div class="col-md-6 col-sm-12">
-              <img src="assets/img/about/img1.jpg" alt="">              
+              <img src= "{{ asset('img/about/img1.jpg') }}" alt="">
             </div>
             <div class="col-md-6 col-sm-12">
               <div class="about-content">
@@ -419,21 +301,24 @@
           <div class="row">
             <div class="touch-slider" class="owl-carousel owl-theme">
               <div class="item active text-center">  
-                <img class="img-member" src="assets/img/testimonial/img1.jpg" alt=""> 
+                <!-- <img class="img-member" src="assets/img/testimonial/img1.jpg" alt="">  -->
+                <img class="img-member" src="{{ asset('img/testimonial/img1.jpg') }}" alt=""> 
                 <div class="client-info">
                  <h2 class="client-name">"John Smith  <span>(Project Menager)</span></h2>
                 </div>
                 <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
               </div>
               <div class="item text-center">
-                <img class="img-member" src="assets/img/testimonial/img2.jpg" alt=""> 
+                <!-- <img class="img-member" src="assets/img/testimonial/img2.jpg" alt="">  -->
+                <img class="img-member" src="{{ asset('img/testimonial/img2.jpg') }}" alt=""> 
                 <div class="client-info">
                  <h2 class="client-name">"John Smith  <span>(Project Menager)</span></h2>
                 </div>
                 <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
               </div>
               <div class="item text-center">
-                <img class="img-member" src="assets/img/testimonial/img3.jpg" alt=""> 
+                <!-- <img class="img-member" src="assets/img/testimonial/img3.jpg" alt="">  -->
+                <img class="img-member" src="{{ asset('img/testimonial/img3.jpg') }}" alt=""> 
                 <div class="client-info">
                   <h2 class="client-name">" Quan Ngyen <span>(Electricity Engineer)</span></h2>
                 </div>
@@ -454,28 +339,36 @@
           <div class="row"> 
             <div id="clients-scroller">
               <div class="items">
-                <img src="assets/img/clients/img1.png" alt="">
+                <!-- <img src="assets/img/clients/img1.png" alt=""> -->
+                <img src="{{ asset('img/clients/img1.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img2.png" alt="">
+                <!-- <img src="assets/img/clients/img2.png" alt=""> -->
+                <img src="{{ asset('img/clients/img2.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img3.png" alt="">
+                <!-- <img src="assets/img/clients/img3.png" alt=""> -->
+                <img src="{{ asset('img/clients/img3.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img4.png" alt="">
+                <!-- <img src="assets/img/clients/img4.png" alt=""> -->
+                <img src="{{ asset('img/clients/img4.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img5.png" alt="">
+                <!-- <img src="assets/img/clients/img5.png" alt=""> -->
+                <img src="{{ asset('img/clients/img5.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img6.png" alt="">
+                <!-- <img src="assets/img/clients/img6.png" alt=""> -->
+                <img src="{{ asset('img/clients/img6.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img6.png" alt="">
+                <!-- <img src="assets/img/clients/img6.png" alt=""> -->
+                <img src="{{ asset('img/clients/img6.png') }}" alt=""> 
               </div>
               <div class="items">
-                <img src="assets/img/clients/img6.png" alt="">
+                <!-- <img src="assets/img/clients/img6.png" alt=""> -->
+                <img src="{{ asset('img/clients/img6.png') }}" alt=""> 
               </div>
             </div>
           </div>
@@ -491,7 +384,7 @@
     			<div class="row">
     				<div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src="assets/img/logo.png" class="img-responsive" alt="Footer Logo"></h3>
+                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
                 <div class="textwidget">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
                 </div>
