@@ -11,16 +11,14 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
-Route::get('/login', 'MyAccountController@myAccount');
-Route::get('/about', 'AboutController@about');
-Route::get('/privacyPolicy', 'PrivacyPolicyController@privacyPolicy');
-Route::get('/indexEs', 'IndexEsController@indexEs');
-Route::get('/indexCa', 'IndexCaController@indexCa');
-Route::get('/bookmarked', 'Bookmarked@bookmarked');
-Route::get('/change-password', 'ChangePassword@changePassword');
-Route::get('/contact', 'ContactController@contact');
-Route::get('/faq', 'Faq@faq');
-Route::get('/privacyPolicy', 'PrivacyPolicyController@privacyPolicy');
-Route::get('/indexEs', 'IndexEsController@indexEs');
-Route::get('/indexCa', 'IndexCaController@indexCa');
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/login', 'MyAccountController@myAccount')->name('login');
+Route::get('/about', 'AboutController@about')->name('about');
+Route::get('/privacyPolicy', 'PrivacyPolicyController@privacyPolicy')->name('privacyPolicy');
+Route::get('/indexEs', 'IndexEsController@indexEs')->name('indexEs');
+Route::get('/indexCa', 'IndexCaController@indexCa')->name('indexCa');
+Route::get('/bookmarked', 'Bookmarked@bookmarked')->name('bookmarked');
+Route::get('/change-password', 'ChangePassword@changePassword')->name('change-password');
+Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/faq', 'Faq@faq')->name('faq');
+
