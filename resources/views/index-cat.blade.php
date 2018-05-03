@@ -55,40 +55,40 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand logo" href="{{ asset('/') }}"><img src= "{{ asset('img/logo.png') }}" alt=""></a>
-                  <a class="navbar-brand logo" style="width: 7%;" href="{{ asset('/') }}"><h3>WallaJob</h3></a>
+                  <a class="navbar-brand logo" href="{{ route('index') }}"><img src= "{{ asset('img/logo.png') }}" alt=""></a>
+                  <a class="navbar-brand logo" style="width: 7%;" href="{{ route('index') }}"><h3>WallaJob</h3></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar">              
                    <!-- Start Navigation List -->
                   <ul class="nav navbar-nav">
                     <li>
-                      <a class="active" href="{{ asset('/') }}">
+                      <a class="active" href="{{ route('index') }}">
                       Inici <i class="fa fa-angle"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="{{ asset('/about') }}">
+                      <a href="{{ route('about') }}">
                       WallaJob <i class="fa fa-angle-down"></i>
                       </a>
                       <ul class="dropdown">
                         <li>
-                          <a href="{{ asset('/about') }}">
+                          <a href="{{ route('about') }}">
                           Sobre
                           </a>
                         </li>
                         <li>
-                          <a href="{{ asset('/privacyPolicy') }}">
+                          <a href="{{ route('privacyPolicy') }}">
                           Política de privacitat
                           </a>
                         </li>
                         <li>
-                          <a href="{{ asset('/faq') }}">
+                          <a href="{{ route('faq') }}">
                           FAQ
                           </a>
                         </li>
                         <li>
-                          <a href="contact.html">
+                          <a href="{{ route('contact') }}">
                           Contacte
                           </a>
                         </li>
@@ -105,12 +105,12 @@
                       </a>
                     </li>
                     <li>
-                      <a class="active" href="{{ asset('/') }}">
+                      <a class="active" href="{{ route('index') }}">
                         <i class="fa fa-globe" style="font-size:18px"></i>
                       </a>
                       <ul class="dropdown">
                         <li>
-                          <a href="{{ asset('/') }}">
+                          <a href="{{ route('index') }}">
                             English
                           </a>
                         </li>
@@ -136,24 +136,24 @@
               <!-- Mobile Menu Start -->
               <ul class="wpb-mobile-menu">
                 <li>
-                  <a class="active" href="{{ asset('/') }}">Inici</a>
+                  <a class="active" href="{{ route('index') }}">Inici</a>
                   <ul>
-                    <li><a href="{{ asset('/') }}">English</a></li>
+                    <li><a href="{{ route('index') }}">English</a></li>
                     <li><a href="{{ asset('/indexEs') }}">Castellà</a></li>
                     <li><a class="active" href="{{ asset('/indexCa') }}">Català</a></li>
                   </ul>                       
                 </li>
                 <li>
-                  <a href="{{ asset('/about') }}">Pàgines</a>
+                  <a href="{{ route('about') }}">Pàgines</a>
                   <ul>
-                    <li><a href="{{ asset('/about') }}">Sobre</a></li>
+                    <li><a href="{{ route('about') }}">Sobre</a></li>
                     <li><a href="job-page.html">Pàgina d'Ocupació</a></li>
                     <li><a href="job-details.html">Detalls del treball</a></li>
                     <li><a href="resume.html">Pàgina de currículum</a></li>
-                    <li><a href="{{ asset('/privacyPolicy') }}">Política de privacitat</a></li>
-                    <li><a href="{{ asset('/faq') }}">FAQ</a></li>
+                    <li><a href="{{ route('privacyPolicy') }}">Política de privacitat</a></li>
+                    <li><a href="{{ route('faq') }}">FAQ</a></li>
                     <li><a href="pricing.html">Taules de preus</a></li>
-                    <li><a href="contact.html">Contacte</a></li>
+                    <li><a href="{{ route('contact') }}">Contacte</a></li>
                   </ul>
                 </li>
                 <li>
@@ -198,14 +198,14 @@
               </div>
                 <h3 class="title-menu">Totes les Pàgines</h3>
                 <ul class="nav navmenu-nav">
-                  <li><a href="{{ asset('/') }}">English</a></li>
+                  <li><a href="{{ route('index') }}">English</a></li>
                   <li><a href="{{ asset('/indexEs') }}">Castellà</a></li>
                   <li><a href="{{ asset('/indexCa') }}">Català</a></li>
-                  <li><a href="{{ asset('/about') }}">Sobre Nosaltres</a></li>            
+                  <li><a href="{{ route('about') }}">Sobre Nosaltres</a></li>            
                   <li><a href="job-page.html">Pàgina de treball</a></li>             
                   <li><a href="job-details.html">Detalls del treball</a></li>    
                   <li><a href="resume.html">Pàgina de currículum</a></li> 
-                  <li><a href="{{ asset('/privacyPolicy') }}">Política de privacitat</a></li>
+                  <li><a href="{{ route('privacyPolicy') }}">Política de privacitat</a></li>
                   <li><a href="pricing.html">Taules de preus</a></li>
                   <li><a href="browse-jobs.html">Per a treballadors</a></li>
                   <li><a href="browse-categories.html">Examinar les categories</a></li>
@@ -216,8 +216,8 @@
                   <li><a href="manage-jobs.html">Administrar treballs</a></li>
                   <li><a href="manage-applications.html">Gestiona les aplicacions</a></li>
                   <li><a href="browse-resumes.html">Cercar currículums</a></li>
-                  <li><a href="contact.html">Contacte</a></li>
-                  <li><a href="{{ asset('/faq') }}">FAQ</a></li>
+                  <li><a href="{{ route('contact') }}">Contacte</a></li>
+                  <li><a href="{{ route('faq') }}">FAQ</a></li>
                   <li><a href="my-account.html">Accedir</a></li>
                 </ul><!--- End Menu -->
             </div> <!--- End Off Canvas Side Menu -->

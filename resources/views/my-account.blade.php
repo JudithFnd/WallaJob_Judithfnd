@@ -58,20 +58,20 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="{{ asset('/') }}"><img src="assets/img/logo.png" alt=""></a>
-                <a class="navbar-brand logo" style="width: 7%;" href="{{ asset('/') }}"><h3>WallaJob</h3></a>
+                <a class="navbar-brand logo" href="{{ route('index') }}"><img src="assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand logo" style="width: 7%;" href="{{ route('index') }}"><h3>WallaJob</h3></a>
               </div>
 
               <div class="collapse navbar-collapse" id="navbar">              
                  <!-- Start Navigation List -->
                  <ul class="nav navbar-nav">
                   <li>
-                    <a href="{{ asset('/') }}">
+                    <a href="{{ route('index') }}">
                     Home <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown">
                       <li>
-                        <a href="{{ asset('/') }}">
+                        <a href="{{ route('index') }}">
                         English
                         </a>
                       </li>
@@ -88,12 +88,12 @@
                     </ul>
                   </li>
                   <li>
-                    <a class="active" href="{{ asset('/about') }}">
+                    <a class="active" href="{{ route('about') }}">
                     Pages <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown">
                       <li>
-                        <a class="active" href="{{ asset('/about') }}">
+                        <a class="active" href="{{ route('about') }}">
                         About
                         </a>
                       </li>
@@ -113,12 +113,12 @@
                         </a>
                       </li>
                       <li>
-                        <a href="{{ asset('/privacyPolicy') }}">
+                        <a href="{{ route('privacyPolicy') }}">
                         Privacy Policy
                         </a>
                       </li>
                       <li>
-                        <a href="{{ asset('/faq') }}">
+                        <a href="{{ route('faq') }}">
                         FAQ
                         </a>
                       </li>
@@ -128,7 +128,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="contact.html">
+                        <a href="{{ route('contact') }}">
                         Contact
                         </a>
                       </li>
@@ -226,25 +226,25 @@
             <!-- Mobile Menu Start -->
             <ul class="wpb-mobile-menu">
               <li>
-                <a href="{{ asset('/') }}">Home</a>
+                <a href="{{ route('index') }}">Home</a>
                 <ul>
-                  <li><a href="{{ asset('/') }}">Home 1</a></li>
+                  <li><a href="{{ route('index') }}">Home 1</a></li>
                   <li><a href="{{ asset('/indexEs') }}">Home 2</a></li>
                   <li><a href="{{ asset('/indexCa') }}">Home 3</a></li>
                   <li><a href="index-04.html">Home 4</a></li>
                 </ul>                       
               </li>
               <li>
-                <a href="{{ asset('/about') }}">Pages</a>
+                <a href="{{ route('about') }}">Pages</a>
                 <ul>
-                  <li><a href="{{ asset('/about') }}">About</a></li>
+                  <li><a href="{{ route('about') }}">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
                   <li><a href="job-details.html">Job Details</a></li>
                   <li><a href="resume.html">Resume Page</a></li>
-                  <li><a href="{{ asset('/privacyPolicy') }}">Privacy Policy</a></li>
-                  <li><a href="{{ asset('/faq') }}">FAQ</a></li>
+                  <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
+                  <li><a href="{{ route('faq') }}">FAQ</a></li>
                   <li><a href="pricing.html">Pricing Tables</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
               </li>
               <li>
@@ -289,14 +289,14 @@
             </div>
             <h3 class="title-menu">All Pages</h3>
             <ul class="nav navmenu-nav">
-              <li><a href="{{ asset('/') }}">English</a></li>
+              <li><a href="{{ route('index') }}">English</a></li>
               <li><a href="{{ asset('/indexEs') }}">Spanish</a></li>
               <li><a href="{{ asset('/indexCa') }}">Catalan</a></li>
-              <li><a href="{{ asset('/about') }}">About us</a></li>            
+              <li><a href="{{ route('about') }}">About us</a></li>            
               <li><a href="job-page.html">Job Page</a></li>             
               <li><a href="job-details.html">Job Details</a></li>    
               <li><a href="resume.html">Resume Page</a></li> 
-              <li><a href="{{ asset('/privacyPolicy') }}">Privacy Policy</a></li>
+              <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
               <li><a href="pricing.html">Pricing Tables</a></li>
               <li><a href="browse-jobs.html">Browse Jobs</a></li>
               <li><a href="browse-categories.html">Browse Categories</a></li>
@@ -307,8 +307,8 @@
               <li><a href="manage-jobs.html">Manage Jobs</a></li>
               <li><a href="manage-applications.html">Manage Applications</a></li>
               <li><a href="browse-resumes.html">Browse Resumes</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="{{ asset('/faq') }}">Faq</a></li>
+              <li><a href="{{ route('contact') }}">Contact</a></li>
+              <li><a href="{{ route('faq') }}">Faq</a></li>
               <li><a href="my-account.html">Login</a></li>
               </ul><!--- End Menu -->
           </div> <!--- End Off Canvas Side Menu -->
