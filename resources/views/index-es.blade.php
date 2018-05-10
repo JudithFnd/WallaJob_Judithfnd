@@ -128,8 +128,8 @@
                       </ul>
                   </ul>
                   <ul class="nav navbar-nav navbar-right float-right">
-                    <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Publicar un Empleo</a></li>
-                    <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Acceder</a></li>
+                     <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Regístrate</a></li>
+                     <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Inicia Sesión</a></li>
                   </ul>
                 </div>
               </div>
@@ -184,8 +184,8 @@
                     <li><a href="single-post.html">Blog Single Post</a></li>
                   </ul>
                 </li>  
-                <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-                <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+                <li class="btn-m"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Regístrate</a></li>
+                <li class="btn-m"><a href="{{ route('login') }}"><i class="ti-lock"></i>  Inicia Sesión</a></li>            
               </ul>
               <!-- Mobile Menu End --> 
             </nav>

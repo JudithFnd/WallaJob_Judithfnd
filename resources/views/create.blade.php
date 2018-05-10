@@ -132,7 +132,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
-                   <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                  
+                  <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                  
                   <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
               </div>                           
@@ -231,10 +231,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My Account</h2>
+                <h2 class="product-title">Register</h2>
                 <ol class="breadcrumb">
                   <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My Account</li>
+                  <li class="current">Register</li>
                 </ol>
               </div>
             </div>
@@ -247,48 +247,54 @@
       <div class="container">
                 <!-- Start Animations Text -->
 
-                
 
-                <form id="form_login" action="/action_page.php">
-                  <h1>Login</h1>
-                  <p>Please fill in this form to login.</p>
-                  <hr>
-                  <div class="imgcontainer">
-                  </div>
-
+            <!-- Sing up form -->
+                <form  id="form_sign" form method="POST" action="/register" style="border:1px solid #ccc">
                   <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                    <button type="submit" class="btn btn-common btn-large">Login</button>
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"> 
+                    </div>
+             
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                    </div>
+             
+                    <div class="form-group">
+                        <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    
                     <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                     </label>
-                  </div>
-
-                  <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
+                    <div class="clearfix">
+                      <button type="button" class="btn btn-common btn-large">Cancel</button>
+                      <button type="submit" class="btn btn-common btn-large">Sign Up</button>
+                    </div>
                   </div>
                 </form>
-              
-                
-                
         </div>
       </div>
     </section>  
 
-     
-
           <!-- Footer Section Start -->
     <footer>
-    	<!-- Footer Area Start -->
-    	<section class="footer-Content">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- Footer Area Start -->
+        <section class="footer-Content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
                 <h3 class="block-title"><img src="assets/img/logo.png" class="img-responsive" alt="Footer Logo"></h3>
                 <div class="textwidget">
@@ -296,20 +302,20 @@
                 </div>
               </div>
             </div>
-    				<div class="col-md-3 col-sm-6 col-xs-12">
-    					<div class="widget">
-    						<h3 class="block-title">Quick Links</h3>
-  							<ul class="menu">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="widget">
+                            <h3 class="block-title">Quick Links</h3>
+                            <ul class="menu">
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
-    					</div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12">
-    					<div class="widget">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="widget">
                 <h3 class="block-title">Trending Jobs</h3>
                 <ul class="menu">
                   <li><a href="#">Android Developer</a></li>
@@ -319,41 +325,41 @@
                   <li><a href="#">Project Manager</a></li>
                 </ul>
               </div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12">
-    					<div class="widget">
-    						<h3 class="block-title">Follow Us</h3>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="widget">
+                            <h3 class="block-title">Follow Us</h3>
                 <div class="bottom-social-icons social-icon">  
                   <a class="twitter" href="https://twitter.com"><i class="ti-twitter-alt"></i></a>
                   <a class="facebook" href="https://web.facebook.com"><i class="ti-facebook"></i></a>                   
                   <a class="youtube" href="https://youtube.com"><i class="ti-youtube"></i></a>
                   <a class="linkedin" href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
-                </div>	
+                </div>  
                 <p>Join our mailing list to stay up to date and get notices about our new releases!</p>
                 <form class="subscribe-box">
                   <input type="text" placeholder="Your email">
                   <input type="submit" class="btn-system" value="Send">
-                </form>	
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</section>
-    	<!-- Footer area End -->
-    	
-    	<!-- Copyright Start  -->
-    	<div id="copyright">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-md-12">
+                </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer area End -->
+        
+        <!-- Copyright Start  -->
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
               <div class="site-info text-center">
                 <p>All Rights reserved &copy; 2018 - Designed & Developed by <a rel="nofollow" href="http://www.google.com">Judith & Andreu</a></p>
               </div>   
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    	<!-- Copyright End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
 
     </footer>
     <!-- Footer Section End -->  

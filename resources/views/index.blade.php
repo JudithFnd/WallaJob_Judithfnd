@@ -131,9 +131,8 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
-                  <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-                  <!-- <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li> -->
-                  <li class="right"><a href="{{ asset('/login') }}" ><i class="ti-lock"></i>  Log In</a></li>
+                   <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
+                  <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
               </div>                           
             </div>
@@ -181,8 +180,8 @@
                 </ul>
               </li> 
               <li>  
-              <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
-              <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+              <li class="btn-m"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>
+              <li class="btn-m"><a href="{{ route('login') }}"><i class="ti-lock"></i>  Log In</a></li>           
             </ul>
             <!-- Mobile Menu End --> 
           </nav>

@@ -128,8 +128,8 @@
                     </li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right float-right">
-                    <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Publica un Ocupació</a></li>
-                    <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Accedir</a></li>
+                    <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Registra't</a></li>                  
+                    <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Inicia Sessió</a></li>
                   </ul>
                 </div>
               </div>
@@ -184,8 +184,8 @@
                     <li><a href="single-post.html">Blog Publicació única</a></li>
                   </ul>
                 </li>  
-                <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Publica un treball</a></li>
-                <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Iniciar Sessió</a></li>          
+                <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Registra't</a></li>
+                <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Inicia Sessió</a></li>          
               </ul>
               <!-- Mobile Menu End --> 
             </nav>
