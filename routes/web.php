@@ -30,7 +30,6 @@ Route::get('/faq', 'Faq@faq')->name('faq');
 
 
 
-Route::get('/games', 'GamesController@index');
  
  
 
