@@ -190,40 +190,7 @@
               <!-- Mobile Menu End --> 
             </nav>
 
-            <!-- Off Canvas Navigation -->
-            <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
-            <!--- Off Canvas Side Menu -->
-              <div class="close" data-toggle="offcanvas" data-target=".navmenu">
-                  <i class="ti-close"></i>
-              </div>
-                <h3 class="title-menu">Totes les Pàgines</h3>
-                <ul class="nav navmenu-nav">
-                  <li><a href="{{ route('index') }}">English</a></li>
-                  <li><a href="{{ asset('/indexEs') }}">Castellà</a></li>
-                  <li><a href="{{ asset('/indexCa') }}">Català</a></li>
-                  <li><a href="{{ route('about') }}">Sobre Nosaltres</a></li>            
-                  <li><a href="job-page.html">Pàgina de treball</a></li>             
-                  <li><a href="job-details.html">Detalls del treball</a></li>    
-                  <li><a href="resume.html">Pàgina de currículum</a></li> 
-                  <li><a href="{{ route('privacyPolicy') }}">Política de privacitat</a></li>
-                  <li><a href="pricing.html">Taules de preus</a></li>
-                  <li><a href="browse-jobs.html">Per a treballadors</a></li>
-                  <li><a href="browse-categories.html">Examinar les categories</a></li>
-                  <li><a href="add-resume.html">Afegir currículum</a></li>
-                  <li><a href="manage-resumes.html">Administrar Currículum</a></li> 
-                  <li><a href="job-alerts.html">Alertes de treball</a></li> 
-                  <li><a href="post-job.html">Afegir treball</a></li>  
-                  <li><a href="manage-jobs.html">Administrar treballs</a></li>
-                  <li><a href="manage-applications.html">Gestiona les aplicacions</a></li>
-                  <li><a href="browse-resumes.html">Cercar currículums</a></li>
-                  <li><a href="{{ route('contact') }}">Contacte</a></li>
-                  <li><a href="{{ route('faq') }}">FAQ</a></li>
-                  <li><a href="my-account.html">Accedir</a></li>
-                </ul><!--- End Menu -->
-            </div> <!--- End Off Canvas Side Menu -->
-          <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
-            <p><i class="ti-files"></i> Pàgines</p>
-          </div>
+            
       </div>
 
       

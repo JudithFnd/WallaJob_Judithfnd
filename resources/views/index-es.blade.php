@@ -190,8 +190,7 @@
               <!-- Mobile Menu End --> 
             </nav>
 
-            <!-- Off Canvas Navigation -->
-            <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
+            
             
       </div>
 

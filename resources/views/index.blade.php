@@ -441,7 +441,7 @@
     					<div class="widget">
     						<h3 class="block-title">Quick Links</h3>
   							<ul class="menu">
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>

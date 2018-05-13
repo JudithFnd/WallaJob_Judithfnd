@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('css/slicknav.css') }}" type="text/css">
     <!-- Main Styles -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css">
+    
     <!-- Responsive CSS Styles -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css">
 
@@ -58,7 +59,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="{{ route('index') }}"><img src="assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand logo" href="{{ route('index') }}"><img src= "{{ asset('img/logo.png') }}" alt=""></a>
                 <a class="navbar-brand logo" style="width: 7%;" href="{{ route('index') }}"><h3>WallaJob</h3></a>
               </div>
 
@@ -187,46 +188,13 @@
             <!-- Mobile Menu End --> 
           </nav>
 
-          <!-- Off Canvas Navigation -->
-          <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
-          <!--- Off Canvas Side Menu -->
-            <div class="close" data-toggle="offcanvas" data-target=".navmenu">
-                <i class="ti-close"></i>
-            </div>
-            <h3 class="title-menu">All Pages</h3>
-            <ul class="nav navmenu-nav">
-              <li><a href="{{ route('index') }}">English</a></li>
-              <li><a href="{{ asset('/indexEs') }}">Spanish</a></li>
-              <li><a href="{{ asset('/indexCa') }}">Catalan</a></li>
-              <li><a href="{{ route('about') }}">About us</a></li>            
-              <li><a href="job-page.html">Job Page</a></li>             
-              <li><a href="job-details.html">Job Details</a></li>    
-              <li><a href="resume.html">Resume Page</a></li> 
-              <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
-              <li><a href="pricing.html">Pricing Tables</a></li>
-              <li><a href="browse-jobs.html">Browse Jobs</a></li>
-              <li><a href="browse-categories.html">Browse Categories</a></li>
-              <li><a href="add-resume.html">Add Resume</a></li>
-              <li><a href="manage-resumes.html">Manage Resumes</a></li> 
-              <li><a href="job-alerts.html">Job Alerts</a></li> 
-              <li><a href="post-job.html">Add Job</a></li>  
-              <li><a href="manage-jobs.html">Manage Jobs</a></li>
-              <li><a href="manage-applications.html">Manage Applications</a></li>
-              <li><a href="browse-resumes.html">Browse Resumes</a></li>
-              <li><a href="{{ route('contact') }}">Contact</a></li>
-              <li><a href="{{ route('faq') }}">Faq</a></li>
-              <li><a href="my-account.html">Login</a></li>
-              </ul><!--- End Menu -->
-          </div> <!--- End Off Canvas Side Menu -->
-          <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
-            <p><i class="ti-files"></i> All Pages</p>
-          </div>
+          
         </div>
       </div>
       <!-- Header Section End -->  
 
       <!-- Page Header Start -->
-      <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+      <div class="page-header" style="background: url({{ asset('img/banner1.jpg') }});">
         <div class="container">
           <div class="row">         
             <div class="col-md-12">
@@ -249,7 +217,7 @@
 
 
             <!-- Sing up form -->
-                <form  id="form_sign" form method="POST" action="/register" style="border:1px solid #ccc">
+                <form  id="form_login" form method="POST" action="/register" style="border:1px solid #ccc">
                   <div class="container">
                     <h1>Sign Up</h1>
                     <p>Please fill in this form to create an account.</p>
@@ -268,9 +236,9 @@
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
                     </div>
              
-                    <div class="form-group">
-                        <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
-                    </div>
+                    <!-- <div class="form-group">
+                        <button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Sign Up</button>
+                    </div> -->
                     
                     <label>
                       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -279,8 +247,9 @@
                     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
                   <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
                     <div class="clearfix">
-                      <button type="button" class="btn btn-common btn-large">Cancel</button>
-                      <button type="submit" class="btn btn-common btn-large">Sign Up</button>
+                      <button type="reset" class="btn btn-common btn-large">Cancel</button>
+                      <button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Sign Up</button>
+                      <!-- <button type="submit" class="btn btn-common btn-large">Sign Up</button> -->
                     </div>
                   </div>
                 </form>
@@ -296,7 +265,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src="assets/img/logo.png" class="img-responsive" alt="Footer Logo"></h3>
+                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
                 <div class="textwidget">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
                 </div>
@@ -306,7 +275,7 @@
                         <div class="widget">
                             <h3 class="block-title">Quick Links</h3>
                             <ul class="menu">
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>

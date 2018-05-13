@@ -214,7 +214,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
-                  <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+                  <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
                   <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
               </div>
@@ -277,45 +277,12 @@
             <!-- Mobile Menu End --> 
           </nav>
 
-          <!-- Off Canvas Navigation -->
-          <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
-          <!--- Off Canvas Side Menu -->
-            <div class="close" data-toggle="offcanvas" data-target=".navmenu">
-                <i class="ti-close"></i>
-            </div>
-            <h3 class="title-menu">All Pages</h3>
-            <ul class="nav navmenu-nav">
-              <li><a href="{{ route('index') }}">English</a></li>
-              <li><a href="{{ asset('/indexEs') }}">Spanish</a></li>
-              <li><a href="{{ asset('/indexCa') }}">Catalan</a></li>
-              <li><a href="{{ route('about') }}">About us</a></li>            
-              <li><a href="job-page.html">Job Page</a></li>             
-              <li><a href="job-details.html">Job Details</a></li>    
-              <li><a href="resume.html">Resume Page</a></li> 
-              <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
-              <li><a href="pricing.html">Pricing Tables</a></li>
-              <li><a href="browse-jobs.html">Browse Jobs</a></li>
-              <li><a href="browse-categories.html">Browse Categories</a></li>
-              <li><a href="add-resume.html">Add Resume</a></li>
-              <li><a href="manage-resumes.html">Manage Resumes</a></li> 
-              <li><a href="job-alerts.html">Job Alerts</a></li> 
-              <li><a href="post-job.html">Add Job</a></li>  
-              <li><a href="manage-jobs.html">Manage Jobs</a></li>
-              <li><a href="manage-applications.html">Manage Applications</a></li>
-              <li><a href="browse-resumes.html">Browse Resumes</a></li>
-              <li><a href="{{ route('contact') }}">Contact</a></li>
-              <li><a href="{{ route('faq') }}">Faq</a></li>
-              <li><a href="my-account.html">Login</a></li>
-              </ul><!--- End Menu -->
-          </div> <!--- End Off Canvas Side Menu -->
-          <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
-            <p><i class="ti-files"></i> All Pages</p>
-          </div>
+          
       </div>
       <!-- Header Section End -->  
 
       <!-- Page Header Start -->
-      <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+      <div class="page-header" style="background: url({{ asset('img/banner1.jpg') }});">
         <div class="container">
           <div class="row">         
             <div class="col-md-12">
@@ -337,13 +304,13 @@
                 <!-- Start Animations Text -->
                 <h1>
 
-                    You are using Free Lite version of Job Board<br> Purchase Full version to Get all Pages and Features
+                    Page under construction
                 </h1>
               <br>
                 <!-- End Animations Text -->
 
                 <!-- Start Buttons -->
-                <a rel="nofollow" target="_blank" href="https://rebrand.ly/gg-jobboard-purchase" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Purchase Now</a>
+                <a rel="nofollow" target="_blank" href="javascript:history.back(-1);" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Go back</a>
         </div>
       </div>
     </section>
@@ -366,7 +333,7 @@
     					<div class="widget">
     						<h3 class="block-title">Quick Links</h3>
   							<ul class="menu">
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>

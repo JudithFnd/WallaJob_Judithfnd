@@ -128,7 +128,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
-                  <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+                  <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
                   <!-- <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li> -->
                   <li class="right"><a href="{{ asset('/login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
@@ -198,7 +198,10 @@
       <!-- Header Section End -->  
 
       <!-- Page Header Start -->
-      <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+      
+      
+
+      <div class="page-header" style="background: url({{ asset('img/banner1.jpg') }});">
         <div class="container">
           <div class="row">         
             <div class="col-md-12">
@@ -394,7 +397,7 @@
     					<div class="widget">
     						<h3 class="block-title">Quick Links</h3>
   							<ul class="menu">
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="#">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
