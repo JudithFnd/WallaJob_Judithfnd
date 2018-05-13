@@ -148,7 +148,7 @@
                   <ul>
                     <li><a href="{{ route('about') }}">Sobre</a></li>
                     <li><a href="job-page.html">Pàgina d'Ocupació</a></li>
-                    <li><a href="job-details.html">Detalls del treball</a></li>
+                    <li><a href="{{ route('bookmarked') }}">Detalls del treball</a></li>
                     <li><a href="resume.html">Pàgina de currículum</a></li>
                     <li><a href="{{ route('privacyPolicy') }}">Política de privacitat</a></li>
                     <li><a href="{{ route('faq') }}">FAQ</a></li>
@@ -259,10 +259,10 @@
           <div class="col-md-12">
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Dissenyador Web</a><span class="full-time">Temps complet</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Dissenyador Web</a><span class="full-time">Temps complet</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -276,17 +276,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">Més Detalls</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Desenvolupador de Front-End</a><span class="full-time">Temps complet</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Desenvolupador de Front-End</a><span class="full-time">Temps complet</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -300,17 +300,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">Més Detalls</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Contador Sènior</a><span class="part-time">Temps Partit</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Contador Sènior</a><span class="part-time">Temps Partit</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -324,17 +324,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">Més Detalls</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Desenvolupador web Fullstack </a><span class="full-time">Temps complet</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Desenvolupador web Fullstack </a><span class="full-time">Temps complet</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -348,7 +348,7 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">Més Detalls</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
                   </div>
                 </div>
               </div>

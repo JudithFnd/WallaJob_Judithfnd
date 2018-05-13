@@ -152,7 +152,7 @@
                 <ul>
                   <li><a href="{{ route('about') }}">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
-                  <li><a href="job-details.html">Job Details</a></li>
+                  <li><a href="{{ route('bookmarked') }}">Job Details</a></li>
                   <li><a href="resume.html">Resume Page</a></li>
                   <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
                   <li><a href="{{ route('faq') }}">FAQ</a></li>
@@ -254,10 +254,10 @@
           <div class="col-md-12">
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Need a web designer</a><span class="full-time">Full-Time</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Need a web designer</a><span class="full-time">Full-Time</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -271,17 +271,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">More Detail</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Front-end developer needed</a><span class="full-time">Full-Time</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Front-end developer needed</a><span class="full-time">Full-Time</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -295,17 +295,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">More Detail</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Senior Accountant</a><span class="part-time">Part-Time</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Senior Accountant</a><span class="part-time">Part-Time</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -319,17 +319,17 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">More Detail</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="job-list">
               <div class="thumb">
-                <a href="job-details.html"><img src= "{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
+                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
               </div>
               <div class="job-list-content">
-                <h4><a href="job-details.html">Fullstack web developer needed</a><span class="full-time">Full-Time</span></h4>
+                <h4><a href="{{ route('bookmarked') }}">Fullstack web developer needed</a><span class="full-time">Full-Time</span></h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                 <div class="job-tag">
                   <div class="pull-left">
@@ -343,7 +343,7 @@
                     <div class="icon">
                       <i class="ti-heart"></i>
                     </div>
-                    <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">More Detail</a>
                   </div>
                 </div>
               </div>
@@ -442,7 +442,7 @@
     						<h3 class="block-title">Quick Links</h3>
   							<ul class="menu">
                   <li><a href="{{ route('about') }}">About Us</a></li>
-                  <li><a href="#">Support</a></li>
+                  <li><a href="{{ route('contact') }}">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                   <li><a href="{{ route('contact') }}">Contact</a></li>

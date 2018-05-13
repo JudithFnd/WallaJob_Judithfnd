@@ -154,7 +154,7 @@
                 <ul>
                   <li><a href="{{ route('about') }}">About</a></li>
                   <li><a href="job-page.html">Job Page</a></li>
-                  <li><a href="job-details.html">Job Details</a></li>
+                  <li><a href="{{ route('bookmarked') }}">Job Details</a></li>
                   <li><a href="resume.html">Resume Page</a></li>
                   <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
                   <li><a href="{{ route('faq') }}">FAQ</a></li>
@@ -276,7 +276,7 @@
                             <h3 class="block-title">Quick Links</h3>
                             <ul class="menu">
                   <li><a href="{{ route('about') }}">About Us</a></li>
-                  <li><a href="#">Support</a></li>
+                  <li><a href="{{ route('contact') }}">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                   <li><a href="#">Contact</a></li>
