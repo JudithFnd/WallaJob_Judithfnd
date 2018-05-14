@@ -3517,6 +3517,7 @@ form#form_login {
   width: 50%;
   float: left;
   margin-left: 25%;
+  
 }
 
 form#form_login input[type=text], input[type=password] {
@@ -3545,6 +3546,7 @@ form#form_login img.avatar {
 form#form_login .container {
     padding: 16px;
     width: 100%;
+    margin-left: 25%;
 }
 
 form#form_login span.psw {
