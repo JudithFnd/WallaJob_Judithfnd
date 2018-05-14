@@ -40,7 +40,7 @@ class RegistrationController extends Controller
         	$view = 'account_company';
         }
 
-
+        
         auth()->login($user);
         
         return view($view);
