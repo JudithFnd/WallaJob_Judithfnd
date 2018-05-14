@@ -383,48 +383,39 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
-                <div class="textwidget">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
-                </div>
+                <p class="block-title"><img id="logo_footer" src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="textwidget">
+                <p id="text_footer" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title">Enllaços Ràpids</h3>
+                <h3 class="block-title">Enlaces Rápidos</h3>
                 <ul class="menu">
-                  <li><a href="#">Sobre nosaltres</a></li>
-                  <li><a href="#">Suport</a></li>
-                  <li><a href="#">Llicència</a></li>
-                  <li><a href="#">Condicions</a></li>
-                  <li><a href="#">Contacte</a></li>
+                  <li><a href="#">Sobre nosotros</a></li>
+                  <li><a href="#">Apoyo</a></li>
+                  <li><a href="#">Licencia</a></li>
+                  <li><a href="#">Términos y condiciones</a></li>
+                  <li><a href="#">Contacto</a></li>
                 </ul>
               </div>
             </div>
+            
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title">Treballs més buscats</h3>
-                <ul class="menu">
-                  <li><a href="#">Desenvolupador Android</a></li>
-                  <li><a href="#">Contador sènior</a></li>
-                  <li><a href="#">Desenvolupador Front-End</a></li>
-                  <li><a href="#">Junior Tester</a></li>
-                  <li><a href="#">Gerent de Projecte</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="widget">
-                <h3 class="block-title">Segueix-nos</h3>
+                <h3 class="block-title">Síguenos</h3>
                 <div class="bottom-social-icons social-icon">  
                   <a class="twitter" href="https://twitter.com"><i class="ti-twitter-alt"></i></a>
                   <a class="facebook" href="https://web.facebook.com"><i class="ti-facebook"></i></a>                   
                   <a class="youtube" href="https://youtube.com"><i class="ti-youtube"></i></a>
                   <a class="linkedin" href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
                 </div>  
-                <p>Uniu-vos a la nostra llista de correu per estar al dia i rebre avisos sobre els nostres nous llançaments!</p>
+                <p>¡Únase a nuestra lista de correo para estar al día y recibir avisos sobre nuestros nuevos lanzamientos!</p>
                 <form class="subscribe-box">
-                  <input type="text" placeholder="El teu correu electrònic">
+                  <input type="text" placeholder="Tu correo electrónico">
                   <input type="submit" class="btn-system" value="Enviar">
                 </form> 
               </div>
@@ -440,7 +431,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="site-info text-center">
-                <p>Tots els drets reservats &copy; 2018 - Dissenyat & Desenvolupat per <a rel="nofollow" href="http://www.google.com">Judith & Andreu</a></p>
+                <p>Todos los derechos reservados &copy; 2018 - Diseñado & Desarrollado por <a rel="nofollow" href="http://www.google.com">Judith & Andreu</a></p>
               </div>   
             </div>
           </div>

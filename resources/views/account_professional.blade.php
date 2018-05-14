@@ -215,40 +215,48 @@
       <div class="container">
                 
         <!-- Curriculum form -->
-           <h3>Rellena tu CV</h3>
+           
 
-          <form name="miform" method="post" action="http://www.eui.upm.es/~salonso/curso/procesa.php">
-          Name <br />
-          <input type="text" name="name" value="" size="20" maxlength="30" />
+          <form id="form_login" name="miform" method="post" action="http://www.eui.upm.es/~salonso/curso/procesa.php">
+            <h1>Rellena tu CV</h1>
+            <p>Please fill in this form to register.</p>
+            <hr>
+            <div class="imgcontainer">
+            </div>            
+            <div class="container">
+              <label ><b>Name:</b></label> <br />
+              <input type="text" name="name" value="" size="20" maxlength="30" />
 
-          <br />
-          Surname <br />
-          <input type="text" name="surname" value="" size="50" maxlength="80" />
+              
+              <label ><b>Surname:</b></label> <br />
+              <input type="text" name="surname" value="" size="50" maxlength="80" />
 
-          <br />
-          Second surname <br />
-          <input type="text" name="second_surname" value="" size="50" maxlength="80" />
-          
-          <br />
-          Birthdate <br />
-          <input type="date" name="birthdate">
+              <label ><b>Second Surname:</b></label> <br />
+              <input type="text" name="second_surname" value="" size="50" maxlength="80" />
+              
+              <label ><b>Birthdate:</b></label> <br />
+              <input type="date" name="birthdate">
 
-          <br />
-          DNI <br />
-          <input type="text" name="dni" value="" size="10" maxlength="9" />
+              <br />
+              <label ><b>DNI:</b></label> <br />
+              <input type="text" name="dni" value="" size="10" maxlength="9" />
 
-          <br/>
-          Sexo <br/>
-          <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre <br/>
-          <input type="radio" name="sexo" value="mujer" /> Mujer
+              <br/>
+              <label ><b>Sex:</b></label> <br />
+              <input type="radio" name="sexo" value="hombre" checked="checked" /> Man<br/>
+              <input type="radio" name="sexo" value="mujer" /> Woman
 
-          <br/><br/>
-          Incluir mi foto <input type="file" name="foto" />
-
-          <br/><br/>
-          <input type="submit" name="enviar" value="Guardar cambios" />
-          <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
-
+              <br/><br/>
+              
+              <label ><b>Upload Image:</b></label>
+              <div class="container" id="img_up" >
+              <input type="file" name="foto" style=" display:  initial; " />
+              </div>
+              <br/><br/>
+              <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
+              <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
+              
+              </div>
           </form>
         </div>
       </div>
@@ -256,79 +264,69 @@
 
           <!-- Footer Section Start -->
     <footer>
-        <!-- Footer Area Start -->
-        <section class="footer-Content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+    	<!-- Footer Area Start -->
+    	<section class="footer-Content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
-                <div class="textwidget">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
-                </div>
+              <p class="block-title"><img id="logo_footer" src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></p>
               </div>
             </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">Quick Links</h3>
-                            <ul class="menu">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="textwidget">
+                <p id="text_footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
+              </div>
+            </div>
+    				<div class="col-md-3 col-sm-6 col-xs-12">
+    					<div class="widget">
+    						<h3 class="block-title">Quick Links</h3>
+  							<ul class="menu">
                   <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="{{ route('contact') }}">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="widget">
-                <h3 class="block-title">Trending Jobs</h3>
-                <ul class="menu">
-                  <li><a href="#">Android Developer</a></li>
-                  <li><a href="#">Senior Accountant</a></li>
-                  <li><a href="#">Frontend Developer</a></li>
-                  <li><a href="#">Junior Tester</a></li>
-                  <li><a href="#">Project Manager</a></li>
-                </ul>
-              </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">Follow Us</h3>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12">
+    					<div class="widget">
+    						<h3 class="block-title">Follow Us</h3>
                 <div class="bottom-social-icons social-icon">  
                   <a class="twitter" href="https://twitter.com"><i class="ti-twitter-alt"></i></a>
                   <a class="facebook" href="https://web.facebook.com"><i class="ti-facebook"></i></a>                   
                   <a class="youtube" href="https://youtube.com"><i class="ti-youtube"></i></a>
                   <a class="linkedin" href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
-                </div>  
+                </div>	
                 <p>Join our mailing list to stay up to date and get notices about our new releases!</p>
                 <form class="subscribe-box">
                   <input type="text" placeholder="Your email">
                   <input type="submit" class="btn-system" value="Send">
-                </form> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer area End -->
-        
-        <!-- Copyright Start  -->
-        <div id="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
+                </form>	
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- Footer area End -->
+    	
+    	<!-- Copyright Start  -->
+    	<div id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
               <div class="site-info text-center">
                 <p>All Rights reserved &copy; 2018 - Designed & Developed by <a rel="nofollow" href="http://www.google.com">Judith & Andreu</a></p>
               </div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Copyright End -->
 
     </footer>
-    <!-- Footer Section End -->  
+    <!-- Footer Section End --> 
       
       <!-- Go To Top Link -->
       <a href="#" class="back-to-top">

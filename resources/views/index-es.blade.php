@@ -384,10 +384,12 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
-                <div class="textwidget">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
-                </div>
+                <p class="block-title"><img id="logo_footer" src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="textwidget">
+                <p id="text_footer" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -402,18 +404,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="widget">
-                <h3 class="block-title">Trabajos más buscados</h3>
-                <ul class="menu">
-                  <li><a href="#">Desarrollador Android</a></li>
-                  <li><a href="#">Contador senior</a></li>
-                  <li><a href="#">Desarrollador Front-End</a></li>
-                  <li><a href="#">Junior Tester</a></li>
-                  <li><a href="#">Gerente de Proyecto</a></li>
-                </ul>
-              </div>
-            </div>
+            
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
                 <h3 class="block-title">Síguenos</h3>

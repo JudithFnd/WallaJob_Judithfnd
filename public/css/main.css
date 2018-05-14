@@ -1578,7 +1578,7 @@ footer .block-title {
 }
 footer .footer-Content {
   background-color: #202020;
-  padding: 60px 0;
+  padding: 30px 0px 0px 0px;
   color: #fff;
 }
 .textwidget {
@@ -1652,7 +1652,7 @@ footer .menu li a:hover {
 #copyright {
   background-color: #202020;
   border-top: 1px solid #393939;
-  padding: 20px 0 10px;
+  padding: 0px;
   color: #fff;
 }
 #copyright p {
@@ -3544,8 +3544,7 @@ form#form_login img.avatar {
 form#form_login .container {
     padding: 16px;
     width: 100%;
-    margin-left: 25%;
-}
+  }
 
 form#form_login span.psw {
     float: left;
@@ -3568,4 +3567,21 @@ form#form_login h1{
 
   margin-top: 2%;
 
+}
+#logo_footer {
+  
+  display:block;
+    margin:auto;
+
+}
+#text_footer{
+  vertical-align: middle;
+  margin-top: 25%;
+}
+
+
+form#form_login .container#img_up {
+  padding: 16px;
+  border: 1px solid #ccc;
+  width: 100%;
 }

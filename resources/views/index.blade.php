@@ -431,10 +431,12 @@
     			<div class="row">
     				<div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-                <h3 class="block-title"><img src= "{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></h3>
-                <div class="textwidget">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
-                </div>
+              <p class="block-title"><img id="logo_footer" src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="textwidget">
+                <p id="text_footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
               </div>
             </div>
     				<div class="col-md-3 col-sm-6 col-xs-12">
@@ -445,21 +447,9 @@
                   <li><a href="{{ route('contact') }}">Support</a></li>
                   <li><a href="#">License</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="{{ route('contact') }}">Contact</a></li>
+                  <li><a href="#">Contact</a></li>
                 </ul>
     					</div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12">
-    					<div class="widget">
-                <h3 class="block-title">Trending Jobs</h3>
-                <ul class="menu">
-                  <li><a href="#">Android Developer</a></li>
-                  <li><a href="#">Senior Accountant</a></li>
-                  <li><a href="#">Frontend Developer</a></li>
-                  <li><a href="#">Junior Tester</a></li>
-                  <li><a href="#">Project Manager</a></li>
-                </ul>
-              </div>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12">
     					<div class="widget">
