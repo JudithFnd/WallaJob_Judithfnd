@@ -216,46 +216,41 @@
                 <!-- Start Animations Text -->
 
 
-            <!-- Sing up form -->
-                <form  id="form_login" form method="POST" action="{{ route('createUser') }}" style="border:1px solid #ccc">
-                    {{ csrf_field() }}
-                  <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">                    
-                        <label for="type_user">Do you offer work or do you want work? <br>
-                        <input type="radio" name="type_user" value="0" checked> Professional user.<br>
-                        <input type="radio" name="type_user" value="1"> Company user.<br>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"> 
-                    </div>
-             
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
-                    </div>            
-                    
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                    </label>
-                    
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                  <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
-                    <div class="clearfix">
-                      <button type="reset" class="btn btn-common btn-large">Cancel</button>
-                      <button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Sign Up</button>
-                      <!-- <button type="submit" class="btn btn-common btn-large">Sign Up</button> -->
-                    </div>
-                  </div>
-                </form>
+            <!-- Curriculum form -->
+               <h3>Rellena tu CV</h3>
+
+<form name="miform" method="post" action="http://www.eui.upm.es/~salonso/curso/procesa.php">
+Nombre <br />
+<input type="text" name="nombre" value="" size="20" maxlength="30" />
+
+<br />
+Apellidos <br />
+<input type="text" name="apellidos" value="" size="50" maxlength="80" />
+
+<br />
+Contrase&ntilde;a <br />
+<input type="password" name="contrasena" value="" maxlength="10" />
+
+<br />
+DNI <br />
+<input type="text" name="dni" value="" size="10" maxlength="9" />
+
+<br/>
+Sexo <br/>
+<input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre <br/>
+<input type="radio" name="sexo" value="mujer" /> Mujer
+
+<br/><br/>
+Incluir mi foto <input type="file" name="foto" />
+
+<br/><br/>
+<input name="suscribir" type="checkbox" value="suscribir" checked="checked"/> Suscribirme al bolet&iacute;n de novedades
+
+<br/><br/>
+<input type="submit" name="enviar" value="Guardar cambios" />
+<input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+
+</form>
         </div>
       </div>
     </section>  

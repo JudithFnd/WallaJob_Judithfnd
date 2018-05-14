@@ -6,10 +6,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
  
-class Professionals extends Authenticatable
+class Users extends Authenticatable
 {
     use Notifiable;
-    protected $table = 'professionals';
+    protected $table = 'users';
     public $timestamps = false;
 
     
@@ -19,7 +19,7 @@ class Professionals extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'type_user', 'email', 'password',
     ];
     
     /**

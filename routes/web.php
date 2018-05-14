@@ -14,7 +14,7 @@
 Route::get('/', 'IndexController@index')->name('index');
 
 Route::get('/register', 'RegistrationController@create')->name('signup');
-Route::post('register', 'RegistrationController@store');
+Route::post('register', 'RegistrationController@store')->name('createUser');
 
 Route::get('/login', 'MyAccountController@myAccount')->name('login');
 Route::get('/about', 'AboutController@about')->name('about');
@@ -26,14 +26,6 @@ Route::get('/change-password', 'ChangePassword@changePassword')->name('change-pa
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::get('/faq', 'Faq@faq')->name('faq');
 
-
-
-
-
- 
- 
-
- 
 //Route::get('/login', 'SessionsController@create');
 //Route::post('/login', 'SessionsController@store');
 //Route::get('/logout', 'SessionsController@destroy');
