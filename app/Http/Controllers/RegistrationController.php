@@ -27,15 +27,23 @@ class RegistrationController extends Controller
 
         $user = new Users;
         $user->name = $request->name;
-        $user->type_user = intval($request->input('type_user'));
+        $user->type_user = intval($request->input('type_user')); // change it to integer
         $user->email = $request->email;
         $user->password = $request->password;
 
         $user->save();
 
+        $view = '';
+        if ($user->type_user === 0) {
+        	$view = 'account_professional';
+        } else if ($user->type_user === 1) {
+        	$view = 'account_company';
+        }
+
+
         auth()->login($user);
         
-        return redirect()->to('/');
+        return view($view);
     }
 }
 

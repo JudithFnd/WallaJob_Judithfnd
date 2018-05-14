@@ -13,8 +13,10 @@
 
 Route::get('/', 'IndexController@index')->name('index');
 
+
 Route::get('/register', 'RegistrationController@create')->name('signup');
 Route::post('register', 'RegistrationController@store')->name('createUser');
+
 
 Route::get('/login', 'MyAccountController@myAccount')->name('login');
 Route::get('/about', 'AboutController@about')->name('about');

@@ -215,10 +215,10 @@
       <div class="container">
                 
         <!-- Curriculum form -->
-           <h3>Rellena tu CV</h3>
+           <h3>Company data</h3>
 
           <form name="miform" method="post" action="http://www.eui.upm.es/~salonso/curso/procesa.php">
-          Name <br />
+          Company name<br />
           <input type="text" name="name" value="" size="20" maxlength="30" />
 
           <br />
@@ -226,24 +226,13 @@
           <input type="text" name="surname" value="" size="50" maxlength="80" />
 
           <br />
-          Second surname <br />
-          <input type="text" name="second_surname" value="" size="50" maxlength="80" />
-          
-          <br />
-          Birthdate <br />
-          <input type="date" name="birthdate">
-
-          <br />
-          DNI <br />
-          <input type="text" name="dni" value="" size="10" maxlength="9" />
+          CIF <br />
+          <input type="text" name="cif" value="" size="10" maxlength="9" />
 
           <br/>
           Sexo <br/>
           <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre <br/>
           <input type="radio" name="sexo" value="mujer" /> Mujer
-
-          <br/><br/>
-          Incluir mi foto <input type="file" name="foto" />
 
           <br/><br/>
           <input type="submit" name="enviar" value="Guardar cambios" />
