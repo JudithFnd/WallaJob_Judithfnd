@@ -243,8 +243,8 @@
 
               <br/>
               <label ><b>Sex:</b></label> <br />
-              <input type="radio" name="sexo" value="hombre" checked="checked" /> Man<br/>
-              <input type="radio" name="sexo" value="mujer" /> Woman
+              <input type="radio" name="sexo" value="0" checked="checked" /> Man<br/>
+              <input type="radio" name="sexo" value="1" /> Woman
 
               <br/><br/>
               
