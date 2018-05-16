@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
-              <p class="block-title"><img id="logo_footer" src="{{ asset('img/logo.png') }}" class="img-responsive" alt="Footer Logo"></p>
+              <p class="block-title"><img id="logo_footer" src="img/logo.png" class="img-responsive" alt="Footer Logo"></p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
