@@ -131,6 +131,7 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
+                
                    <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
                   <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>

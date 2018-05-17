@@ -65,7 +65,7 @@
 
               <div class="collapse navbar-collapse" id="navbar">              
                  <!-- Start Navigation List -->
-                 <ul class="nav navbar-nav">
+                 <ul class="nav navbar-nav">                
                   <li>
                     <a href="{{ route('index') }}">
                     Home <i class="fa fa-angle"></i>
@@ -133,6 +133,11 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
+                  @if( auth()->check() )
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hola {{ auth()->user()->name }}</a>
+                    </li>
+                  @endif
                   <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                  
                   <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>
@@ -263,27 +268,7 @@
     </section>  
 
            @include('footer') 
-      
-      <!-- Go To Top Link -->
-      <a href="#" class="back-to-top">
-        <i class="ti-arrow-up"></i>
-      </a>
-        
-      <div id="loading">
-        <div id="loading-center">
-          <div id="loading-center-absolute">
-            <div class="object" id="object_one"></div>
-            <div class="object" id="object_two"></div>
-            <div class="object" id="object_three"></div>
-            <div class="object" id="object_four"></div>
-            <div class="object" id="object_five"></div>
-            <div class="object" id="object_six"></div>
-            <div class="object" id="object_seven"></div>
-            <div class="object" id="object_eight"></div>
-          </div>
-        </div>
-      </div>
-        
+
     <!-- Main JS  -->
     <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>    

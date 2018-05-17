@@ -214,7 +214,7 @@
       <div class="container">
 
                 <!-- Start Animations Text -->
-                  <form method="POST" action="/log">
+                  <form form method="POST" action="/log">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="email">Email:</label>
@@ -234,10 +234,7 @@
         </div>
       </div>
     </section>  
-
-           @include('footer')    
-      
-
+@include('footer') 
         
     <!-- Main JS  -->
     <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      

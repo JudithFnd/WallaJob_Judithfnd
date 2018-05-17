@@ -254,7 +254,7 @@
             </div>
             <div class="col-md-8">
               <!-- Form -->
-              <form id="contactForm" class="contact-form" data-toggle="validator">
+              <form id="contactForm" class="contact-form" data-toggle="validator" >
                 <div class="row">
                   <div class="col-md-12">
                     <div class="row">
