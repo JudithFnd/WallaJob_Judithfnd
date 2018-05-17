@@ -26,5 +26,5 @@ Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::get('/faq', 'Faq@faq')->name('faq');
 
 Route::get('/login', 'SessionsController@create')->name('login');
-Route::post('/log', 'SessionsController@store')->name('logIn');
-//Route::get('/logout', 'SessionsController@destroy');
+Route::post('/log', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');

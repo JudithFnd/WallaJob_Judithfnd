@@ -212,27 +212,25 @@
 
       <section class="section text-center" >
       <div class="container">
+
                 <!-- Start Animations Text -->
-                <form id="form_login" action="{{ route('logIn') }}">
-                  <h1>Login</h1>
-                  <p>Please fill in this form to login.</p>
-                  <hr>
-                  <div class="imgcontainer">
-                  </div>
-
-                  <div class="container">
-                    <label for="email"><b>Email</b></label><br>
-                    <input type="email" placeholder="Enter Username" name="email" required><br>
-
-                    <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                        
-                    <button type="submit" class="btn btn-common btn-large">Login</button>
-
-                  </div>
-
-                  </div>
-                </form>
+                  <form method="POST" action="/log">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+ 
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+ 
+        <div class="form-group">
+            <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
+        </div>
+        
+    </form>
         </div>
       </div>
     </section>  
