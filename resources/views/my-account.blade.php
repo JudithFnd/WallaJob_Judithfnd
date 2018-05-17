@@ -214,7 +214,7 @@
       <div class="container">
 
                 <!-- Start Animations Text -->
-                  <form method="POST" action="/log">
+      <form method="POST" action="/log">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="email">Email:</label>
