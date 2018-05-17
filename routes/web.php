@@ -28,3 +28,4 @@ Route::get('/faq', 'Faq@faq')->name('faq');
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/log', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
+

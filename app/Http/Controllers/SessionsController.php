@@ -2,8 +2,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\Users;
-
+use App\User;
 
 class SessionsController extends Controller
 {
@@ -20,7 +19,7 @@ class SessionsController extends Controller
             ]);
         }
         
-        return view('/');
+        return view('account_professional');
     }
     
    /* public function destroy()

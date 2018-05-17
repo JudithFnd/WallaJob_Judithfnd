@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\Users;
+use App\User;
 
  
 class RegistrationController extends Controller
@@ -25,7 +25,7 @@ class RegistrationController extends Controller
         ]);
 
 
-        $user = new Users;
+        $user = new User;
         $user->name = $request->name;
         $user->type_user = intval($request->input('type_user')); // change it to integer
         $user->email = $request->email;
