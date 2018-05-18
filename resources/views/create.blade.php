@@ -95,9 +95,8 @@
       </div>
     </section>  
 
-         @include('footer') 
-      
-
+         @include('footer')
+        
     <!-- Main JS  -->
     <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>    
