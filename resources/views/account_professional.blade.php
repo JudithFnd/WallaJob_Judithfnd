@@ -65,7 +65,7 @@
 
               <div class="collapse navbar-collapse" id="navbar">              
                  <!-- Start Navigation List -->
-                 <ul class="nav navbar-nav">
+                 <ul class="nav navbar-nav">                
                   <li>
                     <a href="{{ route('index') }}">
                     Home <i class="fa fa-angle"></i>
@@ -133,6 +133,11 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
+                  @if( auth()->check() )
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hola {{ auth()->user()->name }}</a>
+                    </li>
+                  @endif
                   <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                  
                   <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
                 </ul>

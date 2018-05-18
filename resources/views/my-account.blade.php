@@ -234,10 +234,7 @@
         </div>
       </div>
     </section>  
-
-           @include('footer')    
-      
-
+@include('footer') 
         
     <!-- Main JS  -->
     <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
