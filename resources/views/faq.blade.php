@@ -128,9 +128,17 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right float-right">
-                  <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
-                  <!-- <li class="right"><a href="my-account.blade.php"><i class="ti-lock"></i>  Log In</a></li> -->
-                  <li class="right"><a href="{{ asset('/login') }}" ><i class="ti-lock"></i>  Log In</a></li>
+                  @if( auth()->check() )
+                      <li class="nav-item">
+                          <a class="nav-link font-weight-bold" href="#">Hi {{ auth()->user()->name }}!</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/logout">Log Out</a>
+                      </li>
+                  @else
+                    <li class="left"><a href="{{ route('signup') }}"><i class="ti-pencil-alt"></i> Sign up</a></li>                
+                    <li class="right"><a href="{{ route('login') }}" ><i class="ti-lock"></i>  Log In</a></li>
+                  @endif 
                 </ul>
               </div>                           
             </div>
