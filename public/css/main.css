@@ -795,7 +795,8 @@ nav#menu span.fa.fa-bars:hover {
     intro section style
     ====================================================*/
 .section-intro {
-  background: url("../img/bg/bg-intro.jpg") center center no-repeat;
+  /*background: url("../img/bg/bg-intro.jpg") center center no-repeat;*/
+  background-color: #627198;
   background-size: cover;
   color: #fff;
   position: relative;

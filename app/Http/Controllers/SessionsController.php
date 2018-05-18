@@ -19,13 +19,13 @@ class SessionsController extends Controller
             ]);
         }
         
-        return view('account_professional');
+        return view('index');
     }
     
-   /* public function destroy()
+   public function destroy()
     {
         auth()->logout();
         
-        return redirect()->to('/');
-    }*/
+        return redirect()->to('/login');
+    }
 }
