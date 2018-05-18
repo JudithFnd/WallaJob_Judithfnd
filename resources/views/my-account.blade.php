@@ -214,23 +214,29 @@
       <div class="container">
 
                 <!-- Start Animations Text -->
-      <form method="POST" action="/log">
-        {{ csrf_field() }}
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email">
-        </div>
- 
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
- 
-        <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
-        </div>
-        
-    </form>
+          <form id="form_login" method="POST" action="/log">
+            <div class="container">
+              <h1>Login</h1>
+              <p>Please fill in this form to login.</p>
+              <hr>
+
+
+              {{ csrf_field() }}
+              <div class="form-group">
+                  <label for="email" id="lab_izq">Email:</label>
+                  <input type="email"  class="form-control" id="email" name="email">
+              </div>
+      
+              <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" name="password">
+              </div>
+      
+              <div class="form-group">
+                  <center><button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Login</button></center>
+              </div>
+            </div> 
+          </form>
         </div>
       </div>
     </section>  

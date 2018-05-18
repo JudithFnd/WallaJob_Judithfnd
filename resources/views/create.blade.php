@@ -83,11 +83,11 @@
                     
                     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
                   <center><div class="g-recaptcha" data-sitekey="6Ld_7FUUAAAAANcFtavQIZXBFqkE3U_ysHBF2W-g"></div></center>
-                    <div class="clearfix">
+                  <center><div class="clearfix">
                       <button type="reset" class="btn btn-common btn-large">Cancel</button>
                       <button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Sign Up</button>
                       <!-- <button type="submit" class="btn btn-common btn-large">Sign Up</button> -->
-                    </div>
+                  </center></div>
                   </div>
                 </form>
                 

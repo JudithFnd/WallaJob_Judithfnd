@@ -237,7 +237,7 @@
               <input type="text" name="surname" value="" size="50" maxlength="80" />
 
               <label ><b>Second Surname:</b></label> <br />
-              <input type="text" name="second_surname" value="" size="50" maxlength="80" />
+              <input type="text" name="surname2" value="" size="50" maxlength="80" />
               
               <label ><b>Birthdate:</b></label> <br />
               <input type="date" name="birthdate">
@@ -248,8 +248,33 @@
 
               <br/>
               <label ><b>Sex:</b></label> <br />
-              <input type="radio" name="sexo" value="0" checked="checked" /> Man<br/>
-              <input type="radio" name="sexo" value="1" /> Woman
+              <input type="radio" name="sex" value="0" checked="checked" /> Man<br/>
+              <input type="radio" name="sex" value="1" /> Woman
+
+              
+              <br/>
+
+              <label ><b>Country:</b></label> <br />
+
+              <input type="text" name="country" value="" size="50" maxlength="80" />
+        
+              <br/>
+
+              <label ><b>City:</b></label> <br />
+
+              <input type="text" name="city" value="" size="50" maxlength="80" />
+
+              <br/>
+
+              <label ><b>Direction:</b></label> <br />
+
+              <input type="text" name="direction" value="" size="50" maxlength="80" />              
+
+              <br/>
+
+              <label ><b>Phone Number:</b></label> <br />
+
+              <input type="text" name="phoneNumber" value="" size="50" maxlength="15" />
 
               <br/><br/>
               
@@ -257,10 +282,13 @@
               <div class="container" id="img_up" >
               <input type="file" name="foto" style=" display:  initial; " />
               </div>
+
+
               <br/><br/>
+              <center>
               <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
               <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
-              
+              </center>
               </div>
           </form>
         </div>

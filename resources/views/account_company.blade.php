@@ -224,22 +224,54 @@
             <div class="imgcontainer">
             </div>            
             <div class="container">
+              
               <label ><b>Company Name:</b></label> <br />
           <input type="text" name="name" value="" size="20" maxlength="30" />
 
-          <br />
-          <label ><b>Direction Company:</b></label> <br />
-          <input type="text" name="surname" value="" size="50" maxlength="80" />
 
           <br />
           <label ><b>CIF:</b></label> <br />
           <input type="text" name="cif" value="" size="10" maxlength="9" />
 
           <br/>
-          <label ><b>Sex:</b></label> <br />
-          <input type="radio" name="sexo" value="hombre" checked="checked" /> Man<br/>
-          <input type="radio" name="sexo" value="mujer" /> Woman
 
+              <label ><b>Country:</b></label> <br />
+
+              <input type="text" name="country" value="" size="50" maxlength="80" />
+        
+              <br/>
+
+              <label ><b>City:</b></label> <br />
+
+              <input type="text" name="city" value="" size="50" maxlength="80" />
+
+              <br/>
+
+              <label ><b>Direction Company:</b></label> <br />
+
+              <input type="text" name="direction" value="" size="50" maxlength="80" />              
+
+              <br/>
+
+              <label ><b>Phone Number:</b></label> <br />
+
+              <input type="text" name="phoneNumber" value="" size="50" maxlength="15" />
+
+              <label ><b>Contact Name:</b></label> <br />
+
+              <input type="text" name="contact_name" value="" size="50" maxlength="15" />
+         
+              <br/><br/>
+              
+              <label ><b>Upload Image:</b></label>
+              <div class="container" id="img_up" >
+              <input type="file" name="foto" style=" display:  initial; " />
+              </div>
+          
+
+          
+
+          
           <br/><br/>
           <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
           <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
