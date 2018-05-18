@@ -11,4 +11,12 @@ class ContactController extends Controller
     {
         return view('contact');
     }
+    public function create()
+    {
+        return view('contact.create');
+    }
+
+    public function store()
+    {
+    }
 }
