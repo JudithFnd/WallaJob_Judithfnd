@@ -231,6 +231,12 @@
 
 
               {{ csrf_field() }}
+              <div class="form-group">                    
+                  <label for="type_user">Do you offer work or do you want work? <br>
+                  <input type="radio" name="type_user" value="0" checked> Professional user.<br>
+                  <input type="radio" name="type_user" value="1"> Company user.<br>
+                  </label>
+              </div>
               <div class="form-group">
                   <label for="email" id="lab_izq">Email:</label>
                   <input type="email"  class="form-control" id="email" name="email">

@@ -8,18 +8,31 @@ class SessionsController extends Controller
 {
     public function create()
     {
-        return view('my-account');
+        return view('login');
     }
     
-    public function store()
+    public function store(Request $request)
     {
-        if (auth()->attempt(request(['email', 'password'])) == false) {
+        if (auth()->attempt(request(['type_user', 'email', 'password'])) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
             ]);
         }
         
-        return view('index');
+        $user = new User;
+        $user->type_user = intval($request->input('type_user')); // change it to integer
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        $user->save();
+
+        $view = '';
+        if ($user->type_user === 0) {
+        	$view = 'account_professional';
+        } else if ($user->type_user === 1) {
+        	$view = 'account_company';
+        }
+        return view($view);
     }
     
    public function destroy()
