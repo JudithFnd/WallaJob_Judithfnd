@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class SessionsController extends Controller
 {
@@ -13,18 +15,14 @@ class SessionsController extends Controller
     
     public function store(Request $request)
     {
-        if (auth()->attempt(request(['type_user', 'email', 'password'])) == false) {
+    
+        if (auth()->attempt(request(['email', 'password'])) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
             ]);
         }
-        
-        $user = new User;
-        $user->type_user = intval($request->input('type_user')); // change it to integer
-        $user->email = $request->email;
-        $user->password = $request->password;
-
-        $user->save();
+                
+        $user = Auth::user();
 
         $view = '';
         if ($user->type_user === 0) {
@@ -32,7 +30,8 @@ class SessionsController extends Controller
         } else if ($user->type_user === 1) {
         	$view = 'account_company';
         }
-        return view($view);
+
+        return view($view, ['name'=>$user->name]);
     }
     
    public function destroy()

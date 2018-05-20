@@ -135,7 +135,7 @@
                 <ul class="nav navbar-nav navbar-right float-right">
                   @if( auth()->check() )
                       <li class="nav-item">
-                          <a class="nav-link font-weight-bold" href="#">Hi {{ auth()->user()->name }}!</a>
+                          <a class="nav-link font-weight-bold" href="#">Hi {{ $name }}!</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="/logout">Log Out</a>
@@ -222,70 +222,8 @@
 
       <section class="section text-center" >
       <div class="container">
-                
-        <!-- Curriculum form -->
-           
-
-          <form id="form_login" name="miform" method="post" action="http://www.eui.upm.es/~salonso/curso/procesa.php">
-            <h1>Company Name</h1>
-            <p>Please fill in this form to register.</p>
-            <hr>
-            <div class="imgcontainer">
-            </div>            
-            <div class="container">
-              
-              <label ><b>Company Name:</b></label> <br />
-          <input type="text" name="name" value="" size="20" maxlength="30" />
-
-
-          <br />
-          <label ><b>CIF:</b></label> <br />
-          <input type="text" name="cif" value="" size="10" maxlength="9" />
-
-          <br/>
-
-              <label ><b>Country:</b></label> <br />
-
-              <input type="text" name="country" value="" size="50" maxlength="80" />
-        
-              <br/>
-
-              <label ><b>City:</b></label> <br />
-
-              <input type="text" name="city" value="" size="50" maxlength="80" />
-
-              <br/>
-
-              <label ><b>Direction Company:</b></label> <br />
-
-              <input type="text" name="direction" value="" size="50" maxlength="80" />              
-
-              <br/>
-
-              <label ><b>Phone Number:</b></label> <br />
-
-              <input type="text" name="phoneNumber" value="" size="50" maxlength="15" />
-
-              <label ><b>Contact Name:</b></label> <br />
-
-              <input type="text" name="contact_name" value="" size="50" maxlength="15" />
-         
-              <br/><br/>
-              
-              <label ><b>Upload Image:</b></label>
-              <div class="container" id="img_up" >
-              <input type="file" name="foto" style=" display:  initial; " />
-              </div>
-          
-
-          
-
-          
-          <br/><br/>
-          <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
-          <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
-
-          </form>
+                <button class="btn btn-common btn-large"><a href="{{ route('companyData') }}">Company data</a></button>
+                <button class="btn btn-common btn-large">Post a job</button>
         </div>
       </div>
     </section>  

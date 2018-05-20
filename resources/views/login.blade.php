@@ -134,7 +134,7 @@
                 <ul class="nav navbar-nav navbar-right float-right">
                   @if( auth()->check() )
                       <li class="nav-item">
-                          <a class="nav-link font-weight-bold" href="#">Hi {{ auth()->user()->name }}!</a>
+                          <a class="nav-link font-weight-bold" href="#">Hi {{ $name }}!</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="/logout">Log Out</a>
@@ -223,20 +223,13 @@
       <div class="container">
 
                 <!-- Start Animations Text -->
-          <form id="form_login" method="POST" action="/log">
+          <form id="form_login" method="POST" action="login">
             <div class="container">
               <h1>Login</h1>
               <p>Please fill in this form to login.</p>
               <hr>
 
-
               {{ csrf_field() }}
-              <div class="form-group">                    
-                  <label for="type_user">Do you offer work or do you want work? <br>
-                  <input type="radio" name="type_user" value="0" checked> Professional user.<br>
-                  <input type="radio" name="type_user" value="1"> Company user.<br>
-                  </label>
-              </div>
               <div class="form-group">
                   <label for="email" id="lab_izq">Email:</label>
                   <input type="email"  class="form-control" id="email" name="email">

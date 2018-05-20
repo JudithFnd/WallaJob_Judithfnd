@@ -13,7 +13,7 @@ class RegistrationController extends Controller
 	    return view('create');
 	}
 
- public function store(Request $request)
+    public function store(Request $request)
     {    	    	
 
 
@@ -43,7 +43,7 @@ class RegistrationController extends Controller
         
         auth()->login($user);
         
-        return view($view);
+        return view($view, ['name'=>$user->name]);
     }
 }
 
