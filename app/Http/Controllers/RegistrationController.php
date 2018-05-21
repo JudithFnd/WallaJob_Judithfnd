@@ -43,7 +43,7 @@ class RegistrationController extends Controller
         
         auth()->login($user);
         
-        return view($view, ['name'=>$user->name]);
+        return view($view);
     }
 }
 

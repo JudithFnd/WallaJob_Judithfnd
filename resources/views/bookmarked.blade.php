@@ -130,7 +130,7 @@
                 <ul class="nav navbar-nav navbar-right float-right">
                 @if( auth()->check() )
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#">Hi {{ $name }}!</a>
+                        <a class="nav-link font-weight-bold" href="#">Hi {{ auth()->user()->name }}!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Log Out</a>

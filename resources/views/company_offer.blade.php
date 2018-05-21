@@ -222,32 +222,64 @@
 
       <section class="section text-center" >
       <div class="container">
-                <button class="btn btn-common btn-large"><a href="{{ route('companyData') }}">Company data</a></button>
-                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Post a job</a></button>
+       
+        <!-- company data form -->           
+
+          <form id="form_login" name="miform" form method="POST" action="company-offer">
+          {{ csrf_field() }}
+            <h1>Company Offer</h1>
+            <hr>
+            <div class="imgcontainer">
+            </div>            
+            <div class="container">
+              
+          <input type="hidden" name="id_company" value="{{ auth()->user()->id }}"></input>
+
+          <label ><b>Name offer: *</b></label> <br />
+          <input type="text" name="name" value="" size="20" maxlength="30" required/>
+
+
+          <br />
+          <label ><b>Description:</b></label> <br />
+          <textarea rows="4" cols="80" name="description"></textarea>
+          <br/>
+
+              <label ><b>Vacancies number: *</b></label> <br />
+
+              <input type="text" name="vacancies" value="" size="50" maxlength="80" required/>
+        
+              <br/>
+
+              <label ><b>Category Offer:</b></label> <br />
+              <select name="id_category"> 
+                @foreach($offerCategories as $offerCategory)
+                  <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
+                @endforeach
+              </select>
+              <br/>
+
+              <label ><b>Offer status: *</b></label> <br />
+                <input type="radio" name="status" value="0"> Off <br>
+                <input type="radio" name="status" value="1" checked> On <br>         
+             
+              <br/>
+
+              <label ><b>Salary:</b></label> <br />
+              <input type="text" name="salary" value="" size="50" maxlength="80" />
+
+              <br/>
+              
+          <br/><br/>
+          <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
+          <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
+
+          </form>
         </div>
       </div>
     </section>  
 
-           @include('footer')
-        
-    <!-- Main JS  -->
-    <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
-    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>    
-    <script type="text/javascript" src="{{ asset('js/material.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/material-kit.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.parallax.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.slicknav.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jasny-bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/form-validator.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
-    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
-
+    @include('footer')
+    @include('scripts')
       
   </body>
 </html>

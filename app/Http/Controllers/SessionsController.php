@@ -31,7 +31,7 @@ class SessionsController extends Controller
         	$view = 'account_company';
         }
 
-        return view($view, ['name'=>$user->name]);
+        return view($view);
     }
     
    public function destroy()
