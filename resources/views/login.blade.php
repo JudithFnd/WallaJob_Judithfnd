@@ -222,7 +222,6 @@
       <section class="section text-center" >
       <div class="container">
 
-                <!-- Start Animations Text -->
           <form id="form_login" method="POST" action="login">
             <div class="container">
               <h1>Login</h1>
@@ -241,9 +240,10 @@
               </div>
       
               <div class="form-group">
-                  <center><button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Login</button></center>
-              </div>
+                  <center><button style="cursor:pointer" type="submit" class="btn btn-common btn-large">Login</button></center>              
+                </div>                
             </div> 
+            @include('errors.formerrors')
           </form>
         </div>
       </div>
