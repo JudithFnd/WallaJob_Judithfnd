@@ -40,7 +40,7 @@ Route::get('/my-company-account/company-data', 'CompanyDataController@companyDat
 Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
 Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
 
-// Offers page
+// Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
 Route::get('offers/{id}', 'CompanyOfferController@show');
 

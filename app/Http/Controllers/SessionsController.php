@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class SessionsController extends Controller
 {
-    public function create()
+    public function create() //show view login
     {
         return view('login');
     }
     
-    public function myAccount()
+    public function myAccount() // return to the user profile
     {
 
        $user = Auth::user();
@@ -28,7 +28,7 @@ class SessionsController extends Controller
         return view($view);
     }
 
-    public function store(Request $request)
+    public function store(Request $request) // authenticate user
     {
     
         if (auth()->attempt(request(['email', 'password'])) == false) {
@@ -49,7 +49,7 @@ class SessionsController extends Controller
         return view($view);
     }
     
-   public function destroy()
+   public function destroy() // logout
     {
         auth()->logout();
         

@@ -98,7 +98,7 @@
                   </li>
                   
                   <li>
-                    <a href="#">
+                    <a href="{{ route('offers') }}">
                     Offers <i class="fa fa-angle"></i>
                     </a>
                   </li>

@@ -48,24 +48,14 @@
   <body>  
  @include('navigation_bar')
 
-
   <!-- Find Job Section Start -->
-  <section class="find-job section">
-  @foreach($offer as $of)
-        <div class="col-12 mb-3">
-            <div class="card">
-                <div class="card-block">
-                    <h3 class="card-title"><a href="/games/{{ $of->id }}">{{ $of->name }}</a></h3>
-                    <p class="card-text">Published by {{ $of->description }}</p>
-                    <a href="/games/{{ $of->id }}" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    @endforeach
-    </section>
-    <!-- Find Job Section End -->
 
-
+    <ul>
+        @foreach($companyOffers as $offer)
+            <li name="name"><a href="/games/{{ $offer->id }}">{{ $offer->name }}</a></li>
+        @endforeach
+    </ul>
+  <!-- Find Job Section End -->
 
          @include('footer')
          @include('scripts')

@@ -10,17 +10,12 @@ use App\CompanyOffers;
 
 class CompanyOfferController extends Controller
 {
-    public function companyOffer()
+    public function companyOffer() // create company offer view
     {
        return view('company_offer', ['offerCategories' => Category::all()]);
     }
-
-    public function publishedOffers()
-    {
-       return view('offers', ['CompanyOffers' => $offers]);
-    }
     
-    public function store(Request $request)
+    public function store(Request $request) // store the data offers
     {    
         $this->validate(request(), [
             'name' => 'required',
@@ -40,15 +35,16 @@ class CompanyOfferController extends Controller
 
         $offer->save(); 
         // un altre forma de fer-ho  CompanyOffers::create($request->all());
-           //dump($offer);
-          //return 'it works';
+
         return view('account_company'); // compact per imprimir               
 
     }
-
-    public function show(CompanyOffers $id)
+    
+    public function publishedOffers() // published offers view
     {
-        return view('offers', ['offerId' => $id]);
+        $offers = CompanyOffers::all();
+       return view('offers', ['companyOffers' => $offers]);
     }
+
 
 }

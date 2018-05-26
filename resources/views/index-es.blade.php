@@ -96,7 +96,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="{{ route('offers') }}">
                       Ofertas <i class="fa fa-angle"></i>
                       </a>
                     </li>

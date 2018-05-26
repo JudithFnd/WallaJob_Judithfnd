@@ -95,8 +95,9 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="#">
-                      Candidats <i class="fa fa-angle"></i>
+                      
+                      <a href="{{ route('offers') }}">
+                      Ofertes <i class="fa fa-angle"></i>
                       </a>
                     </li>
                     <li>
@@ -127,6 +128,7 @@
                       </ul>
                     </li>
                   </ul>
+                  
                   <ul class="nav navbar-nav navbar-right float-right">
                   @if( auth()->check() )
                     <li class="nav-item">
