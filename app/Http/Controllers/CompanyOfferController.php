@@ -14,6 +14,11 @@ class CompanyOfferController extends Controller
     {
        return view('company_offer', ['offerCategories' => Category::all()]);
     }
+
+    public function publishedOffers()
+    {
+       return view('offers', ['CompanyOffers' => $offers]);
+    }
     
     public function store(Request $request)
     {    
@@ -27,7 +32,7 @@ class CompanyOfferController extends Controller
         $offer->id_company = $request->id_company;
         $offer->name = $request->name;
         $offer->description = $request->description;
-        //$offer->publication_date = null;
+        //$offer->publication_date;
         $offer->vacancies = $request->vacancies;
         $offer->id_category = $request->id_category;
         $offer->status = $request->status;
@@ -36,8 +41,14 @@ class CompanyOfferController extends Controller
         $offer->save(); 
         // un altre forma de fer-ho  CompanyOffers::create($request->all());
            //dump($offer);
+          //return 'it works';
         return view('account_company'); // compact per imprimir               
 
+    }
+
+    public function show(CompanyOffers $id)
+    {
+        return view('offers', ['offerId' => $id]);
     }
 
 }

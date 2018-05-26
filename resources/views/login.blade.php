@@ -222,7 +222,7 @@
       <section class="section text-center" >
       <div class="container">
 
-          <form id="form_login" method="POST" action="login">
+          <form id="form_login" method="POST" action="my-account">
             <div class="container">
               <h1>Login</h1>
               <p>Please fill in this form to login.</p>

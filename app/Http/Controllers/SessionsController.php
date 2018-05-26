@@ -13,6 +13,11 @@ class SessionsController extends Controller
         return view('login');
     }
     
+    public function myAccount()
+    {
+        return view('account_company');
+    }
+
     public function store(Request $request)
     {
     
@@ -38,6 +43,7 @@ class SessionsController extends Controller
     {
         auth()->logout();
         
-        return redirect()->to('/login');
+        return redirect()->to('/');
+        
     }
 }
