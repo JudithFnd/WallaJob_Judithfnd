@@ -15,7 +15,17 @@ class SessionsController extends Controller
     
     public function myAccount()
     {
-        return view('account_company');
+
+       $user = Auth::user();
+
+        $view = '';
+        if ($user->type_user === 0) {
+        	$view = 'account_professional';
+        } else if ($user->type_user === 1) {
+        	$view = 'account_company';
+        }
+
+        return view($view);
     }
 
     public function store(Request $request)
