@@ -28,10 +28,6 @@ Route::get('/logout', 'SessionsController@destroy');
 // Return to my account
 Route::get('/my-account', 'SessionsController@myAccount')->name('myAccount');
 
-////////// Vistes x diferents rols
-///////// https://es.stackoverflow.com/questions/127504/c%C3%B3mo-definir-vistas-distintas-seg%C3%BAn-el-rol-de-usuario
-
-
 // Company account
 Route::post('/my-company-account', 'AccountsController@accountCompany')->name('accountCompany');
 // Company data
@@ -42,7 +38,7 @@ Route::post('/my-company-account/company-offer', 'CompanyOfferController@store')
 
 // Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
-Route::get('offers/{id}', 'CompanyOfferController@show');
+Route::get('offers/{id}', 'CompanyOfferController@show')->name('show_offer');
 
 
 // more

@@ -238,10 +238,18 @@
           <label ><b>Name offer: *</b></label> <br />
           <input type="text" name="name" value="" size="20" maxlength="30" required/>
 
+          <label ><b>Work schedule: </b></label> <br />
+              <input type="radio" name="work_schedule" value="Full-Time"> Full-Time <br>
+              <input type="radio" name="work_schedule" value="Part-Time" checked> Part-Time <br>         
+          <br/>
+
+          <label ><b>Short description:</b></label> <br />
+          <textarea rows="2" maxlength="100" cols="80" name="short_description"></textarea>
+          <br/>
 
           <br />
           <label ><b>Description:</b></label> <br />
-          <textarea rows="4" cols="80" name="description"></textarea>
+          <textarea rows="4" cols="80" maxlength="255" name="description"></textarea>
           <br/>
 
               <label ><b>Vacancies number: *</b></label> <br />
@@ -256,6 +264,11 @@
                   <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
                 @endforeach
               </select>
+              <br/>
+
+              <label ><b>City:</b></label> <br />
+              <input type="text" name="city" value="" size="50" maxlength="80" />
+
               <br/>
 
               <label ><b>Offer status: *</b></label> <br />

@@ -26,10 +26,13 @@ class CompanyOfferController extends Controller
         $offer = new CompanyOffers;
         $offer->id_company = $request->id_company;
         $offer->name = $request->name;
+        $offer->work_schedule = $request->work_schedule;
+        $offer->short_description = $request->short_description;
         $offer->description = $request->description;
         //$offer->publication_date;
         $offer->vacancies = $request->vacancies;
         $offer->id_category = $request->id_category;
+        $offer->city = $request->city;
         $offer->status = $request->status;
         $offer->salary = $request->salary;
 
@@ -43,8 +46,13 @@ class CompanyOfferController extends Controller
     public function publishedOffers() // published offers view
     {
         $offers = CompanyOffers::all();
-       return view('offers', ['companyOffers' => $offers]);
+       return view('offers', ['companyOffers' => $offers], ['offerCategories' => Category::all()]);
     }
 
+    public function show($id)
+    {
+        $offerDetails = CompanyOffers::find($id);
+        return view('show_offer', ['offerDetails' => $offerDetails], ['offerCategories' => Category::all()]);
+    }
 
 }

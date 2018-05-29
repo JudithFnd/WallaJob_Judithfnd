@@ -51,45 +51,46 @@
   <!-- Find Job Section Start -->
     <section class="find-job section">
         <div class="container">
-            <h2 class="section-title">New jobs</h2>
-                           
+            <h2 class="section-title">{{ $offerDetails->name }} <span class="full-time" name="work_schedule">{{$offerDetails->work_schedule}}</span></h2>
+            <br>
             <ul>
-            <div class="row">
-            
-                @foreach($companyOffers as $offer)                
+            <div class="row">               
                 <div class="col-md-12">    
                 <div class="job-list">
                     <div class="job-list-content">
                         <li name="name">
-                            <a href="offers/{{ $offer->id }}">
-                                <h4>{{ $offer->name }}<span class="full-time" name="work_schedule">{{$offer->work_schedule}}</span></h4>
-                                <p>{{$offer->short_description}}</p>
+                                <h4>Short Description</h4>                                                           
+                                <p>{{$offerDetails->short_description}}</p>
+                                <hr>
+                                <h4>Description</h4>   
+                                <p class="show_description">{{$offerDetails->description}}</p>
                                 <div class="job-tag">
                                     <div class="pull-left">
                                         <div class="meta-tag">
                                                      
-                                            <span name="id_category" value="{{ $offer->id_category }}"><i class="ti-briefcase"></i>
+                                            <h5><span name="id_category" value="{{ $offerDetails->id_category }}"><i class="ti-briefcase"></i>Category: 
                                             @foreach($offerCategories as $offerCategory)
-                                                @if($offerCategory->id === $offer->id_category)
+                                                @if($offerCategory->id === $offerDetails->id_category)
                                                     {{ $offerCategory->category }}
                                                 @endif
                                             @endforeach
-                                            </span>                         
+                                            </span></h5>              
                                       
-                                        <span name="city"><i class="ti-location-pin"></i>{{ $offer->city }}</span>
-                                        <span name="salary"><i class="ti-money"></i>{{ $offer->salary }}</span>
+                                        <h5><span name="vacancies"><i class="ti-face-smile"></i>Vacancies: {{ $offerDetails->vacancies }}</span></h5>
+                                        <h5><span name="city"><i class="ti-location-pin"></i>City: {{ $offerDetails->city }}</span></h5>
+                                        <h5><span name="salary"><i class="ti-money"></i>Salari: {{ $offerDetails->salary }}</span></h5>
                                         </div>
                                     </div>
                                     <div class="pull-right">                                
-                                        <a href="offers/{{ $offer->id }}" class="btn btn-common btn-rm">More Detail</a>
+                                        <a href="#" class="btn btn-common btn-rm">Inscribe</a>
                                     </div>
                                 </div>
-                            </a>
+                            
                         </li>
                     </div>
                 </div>
                 </div>
-                @endforeach
+
                 
                 </div>
             </ul>

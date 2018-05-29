@@ -2024,14 +2024,7 @@ footer {
   margin-left: 10px;
   padding: 7px 18px;
 }
-.part-time {
-  font-size: 12px;
-  color: #fff;
-  background: #7f8c8d !important;
-  border-radius: 4px;
-  margin-left: 10px;
-  padding: 7px 18px;
-}
+
 .job-browse .pagination {
   margin-top: 30px;
 }
@@ -2049,10 +2042,11 @@ footer {
   -o-transition: all 0.2s ease-in-out;
 }
 .job-list {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #a1a1a1;
   padding: 15px;
   display: inline-block;
   margin-bottom: 15px;
+  width: 100%;
 }
 .job-list .thumb {
   float: left;
@@ -2062,7 +2056,7 @@ footer {
 }
 .job-list .job-list-content {
   display: block;
-  margin-left: 125px;
+  margin-left: 25px;
   position: relative;
 }
 .job-list .job-list-content h4 {
@@ -2103,6 +2097,10 @@ footer {
   background: #f1f1f1;
   color: #5c9cd8;
   font-size: 16px;
+}
+.show_description{
+  margin-right: 38%;
+  text-align: justify;
 }
 /* ==========================================================================
    Job Alerts Pages Style
