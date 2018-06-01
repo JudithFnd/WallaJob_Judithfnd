@@ -224,15 +224,17 @@
       <div class="container">
        
         <!-- company data form -->
-           
 
-          <form id="form_login" name="miform" method="post" action="">
+          <form id="form_login" name="miform" form method="POST" action="/my-company-account/company-data">
+          {{ csrf_field() }}
             <h1>Company data</h1>
             <hr>
             <div class="imgcontainer">
             </div>            
             <div class="container">
-              
+          
+          <input type="hidden" name="id_user" value="{{ auth()->user()->id }}"></input>
+          
           <label ><b>Company Name:</b></label> <br />
           <input type="text" name="name" value="" size="20" maxlength="30" />
 
@@ -263,7 +265,7 @@
 
               <label ><b>Phone Number:</b></label> <br />
 
-              <input type="text" name="phoneNumber" value="" size="50" maxlength="15" />
+              <input type="text" name="phone_number" value="" size="50" maxlength="15" />
 
               <label ><b>Contact Name:</b></label> <br />
 
@@ -271,9 +273,9 @@
          
               <br/><br/>
               
-              <label ><b>Upload Image:</b></label>
+              <label ><b>URL Image:</b></label>
               <div class="container" id="img_up" >
-              <input type="file" name="foto" style=" display:  initial; " />
+              <input type="text" name="url_image" style=" display:  initial; " />
               </div>
 
           

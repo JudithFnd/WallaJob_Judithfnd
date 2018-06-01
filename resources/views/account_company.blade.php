@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">Register</h2>
+                <h2 class="product-title">My account</h2>
                 <ol class="breadcrumb">
-                  <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">Register</li>
+                  <li><a href="{{ route('index') }}"><i class="ti-home"></i> Home</a></li>
+                  <li class="current">My account</li>
                 </ol>
               </div>
             </div>
@@ -221,9 +221,14 @@
       <!-- Page Header End -->   
 
       <section class="section text-center" >
+      <h3>Hi {{ auth()->user()->name }}, welcome to your profile</h3><br>
+ 
       <div class="container">
-                <button class="btn btn-common btn-large"><a href="{{ route('companyData') }}">Company data</a></button>
-                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Post a job</a></button>
+                
+                <button class="btn btn-common btn-large"><a href="{{ route('companyData') }}">Company data</a></button><br><br>
+                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Post a job</a></button><br><br>
+                <button class="btn btn-common btn-large"><a href="#">My offers</a></button><br><br>
+                
         </div>
       </div>
     </section>  

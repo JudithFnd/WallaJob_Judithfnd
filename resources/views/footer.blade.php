@@ -10,11 +10,7 @@
               <p class="block-title"><img id="logo_footer" src="img/logo.png" class="img-responsive" alt="Footer Logo"></p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="textwidget">
-                <p id="text_footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis. Etiam euismod ornare elementum. Sed ex est, consectetur eget facilisis sed.</p>
-              </div>
-            </div>
+      
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="widget">
                 <h3 class="block-title">Quick Links</h3>
@@ -83,5 +79,4 @@
             <div class="object" id="object_eight"></div>
           </div>
         </div>
-      </div>
-        
+      </div>        

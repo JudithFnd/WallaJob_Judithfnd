@@ -81,9 +81,11 @@
                                         <h5><span name="salary"><i class="ti-money"></i>Salari: {{ $offerDetails->salary }}</span></h5>
                                         </div>
                                     </div>
+                                                                       
                                     <div class="pull-right">                                
                                         <a href="#" class="btn btn-common btn-rm">Inscribe</a>
-                                    </div>
+                                    </div>                                                                 
+                                    
                                 </div>
                             
                         </li>

@@ -28,18 +28,32 @@ Route::get('/logout', 'SessionsController@destroy');
 // Return to my account
 Route::get('/my-account', 'SessionsController@myAccount')->name('myAccount');
 
+
 // Company account
 Route::post('/my-company-account', 'AccountsController@accountCompany')->name('accountCompany');
 // Company data
 Route::get('/my-company-account/company-data', 'CompanyDataController@companyData')->name('companyData');
+Route::post('/my-company-account/company-data', 'CompanyDataController@store');
 // Post a job
 Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
 Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
+
 
 // Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
 Route::get('offers/{id}', 'CompanyOfferController@show')->name('show_offer');
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Professional account
+Route::post('/my-professional-account', 'AccountsController@accountProfessional')->name('accountProfessional');
+// Currículum
+Route::get('/my-professional-account/my-curriculum', 'CurriculumController@curriculum')->name('curriculum');
+Route::post('/my-professional-account/my-curriculum', 'CurriculumController@store');
+// Publication professional
+Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
+Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // more
 Route::get('/contact2', 'ContactController@create')->name('contact.create');

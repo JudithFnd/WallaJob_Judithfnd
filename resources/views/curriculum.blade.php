@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My account</h2>
+                <h2 class="product-title">Register</h2>
                 <ol class="breadcrumb">
-                  <li><a href="{{ route('index') }}"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My account</li>
+                  <li><a href="#"><i class="ti-home"></i> Home</a></li>
+                  <li class="current">Register</li>
                 </ol>
               </div>
             </div>
@@ -221,15 +221,76 @@
       <!-- Page Header End -->   
 
       <section class="section text-center" >
-      <h3>Hi {{ auth()->user()->name }}, welcome to your profile</h3><br>
- 
       <div class="container">
-                
-                <button class="btn btn-common btn-large"><a href="{{ route('curriculum') }}">Create your curriculum vitae</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Publish yourself to find a job</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="#">My curiculum vitae</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="#">My publications</a></button><br><br>
-                
+       
+        <!-- company data form -->
+
+          <form id="form_login" name="miform" form method="POST" action="/my-professional-account/my-curriculum">
+          {{ csrf_field() }}
+            <h1>Fill your Curriculum</h1>
+            <hr>
+            <div class="imgcontainer">
+            </div>            
+            <div class="container">
+          
+          <input type="hidden" name="id_user" value="{{ auth()->user()->id }}"></input>
+          
+          <label ><b>Name:</b></label> <br />
+          <input type="text" name="name" value="" size="20" maxlength="30" required/>
+
+          <br />
+          <label ><b>Surname:</b></label> <br />
+          <input type="text" name="surname" value="" size="20" maxlength="30" required/>
+
+          <br />
+          <label ><b>Second surame:</b></label> <br />
+          <input type="text" name="surname2" value="" size="20" maxlength="30" />
+
+          <br />
+          <label ><b>Birthdate:</b></label> <br />
+          <input type="date" name="birthdate" value="" size="10" maxlength="9" />
+
+
+          <br />
+          <label ><b>DNI:</b></label> <br />
+          <input type="text" name="dni" value="" size="10" maxlength="9" required/>
+
+          <br/>
+          <label ><b>Sex:</b></label> <br />
+          <input type="radio" name="sex" value="0" checked="checked" /> Man<br/>
+          <input type="radio" name="sex" value="1" /> Woman
+
+          <br/>
+          <label ><b>Country:</b></label> <br />
+          <input type="text" name="country" value="" size="50" maxlength="80" />
+    
+          <br/>
+
+          <label ><b>City:</b></label> <br />
+          <input type="text" name="city" value="" size="50" maxlength="80" />
+
+          <br/>
+
+          <label ><b>Direction:</b></label> <br />
+          <input type="text" name="direction" value="" size="50" maxlength="80" />              
+
+          <br/>
+
+          <label ><b>Phone Number:</b></label> <br />
+          <input type="text" name="phone_number" value="" size="50" maxlength="15" />
+
+          <br/> 
+          <label ><b>Image:</b></label>
+          <div class="container" id="img_up" >
+          <input type="text" name="image" style=" display:  initial; " />
+          </div>
+
+          
+          <br/><br/>
+          <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
+          <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
+
+          </form>
         </div>
       </div>
     </section>  
@@ -253,7 +314,6 @@
     <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
-
       
   </body>
 </html>
