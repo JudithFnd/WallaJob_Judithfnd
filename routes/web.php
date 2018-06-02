@@ -51,8 +51,8 @@ Route::post('/my-professional-account', 'AccountsController@accountProfessional'
 Route::get('/my-professional-account/my-curriculum', 'CurriculumController@curriculum')->name('curriculum');
 Route::post('/my-professional-account/my-curriculum', 'CurriculumController@store');
 // Publication professional
-Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
-Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
+Route::get('/my-professional-account/publication-professional', 'PublicationProfessionalController@publicationProfessional')->name('publicationProfessional');
+Route::post('/my-professional-account/publication-professional', 'PublicationProfessionalController@store');
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // more

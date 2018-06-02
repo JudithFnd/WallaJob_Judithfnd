@@ -235,11 +235,11 @@
           
           <input type="hidden" name="id_user" value="{{ auth()->user()->id }}"></input>
           
-          <label ><b>Name:</b></label> <br />
+          <label ><b>Name: *</b></label> <br />
           <input type="text" name="name" value="" size="20" maxlength="30" required/>
 
           <br />
-          <label ><b>Surname:</b></label> <br />
+          <label ><b>Surname: *</b></label> <br />
           <input type="text" name="surname" value="" size="20" maxlength="30" required/>
 
           <br />
@@ -252,7 +252,7 @@
 
 
           <br />
-          <label ><b>DNI:</b></label> <br />
+          <label ><b>DNI: *</b></label> <br />
           <input type="text" name="dni" value="" size="10" maxlength="9" required/>
 
           <br/>

@@ -226,7 +226,7 @@
       <div class="container">
                 
                 <button class="btn btn-common btn-large"><a href="{{ route('curriculum') }}">Create your curriculum vitae</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Publish yourself to find a job</a></button><br><br>
+                <button class="btn btn-common btn-large"><a href="{{ route('publicationProfessional') }}">Publish yourself to find a job</a></button><br><br>
                 <button class="btn btn-common btn-large"><a href="#">My curiculum vitae</a></button><br><br>
                 <button class="btn btn-common btn-large"><a href="#">My publications</a></button><br><br>
                 
@@ -234,7 +234,10 @@
       </div>
     </section>  
 
-           @include('footer')
+    
+    @include('footer')
+
+
         
     <!-- Main JS  -->
     <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      

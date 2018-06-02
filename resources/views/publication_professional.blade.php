@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">Offer</h2>
+                <h2 class="product-title">Publication professional</h2>
                 <ol class="breadcrumb">
-                  <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">Offer</li>
+                  <li><a href="{{ route('index') }}"><i class="ti-home"></i> Home</a></li>
+                  <li class="current">Publication professional</li>
                 </ol>
               </div>
             </div>
@@ -225,66 +225,55 @@
        
         <!-- company data form -->           
 
-          <form id="form_login" name="miform" form method="POST" action="/my-company-account/company-offer">
-            {{ csrf_field() }}
-              <h1>Company Offer</h1>
-              <hr>
-              <div class="imgcontainer">
-              </div>            
-              <div class="container">
-                
-            <input type="hidden" name="id_company" value="{{ auth()->user()->id }}"></input>
+          <form id="form_login" name="miform" form method="POST" action="/my-professional-account/publication-professional">
+          {{ csrf_field() }}
+            <h1>Publication professional</h1>
+            <hr>
+            <div class="imgcontainer">
+            </div>            
+            <div class="container">
+              
+          <input type="hidden" name="id_professional" value="{{ auth()->user()->id }}"></input>
 
-            <label ><b>Name offer: *</b></label> <br />
-            <input type="text" name="name" value="" size="20" maxlength="30" required/>
+          <label ><b>Title: *</b></label> <br />
+          <input type="text" name="name" value="" size="20" maxlength="30" required/>
 
-            <label ><b>Work schedule: </b></label> <br />
-                <input type="radio" name="work_schedule" value="Full-Time"> Full-Time <br>
-                <input type="radio" name="work_schedule" value="Part-Time" checked> Part-Time <br>         
-            <br/>
+          <label ><b>Short description:</b></label> <br />
+          <textarea rows="2" maxlength="100" cols="80" name="short_description"></textarea>
+          <br/>
 
-            <label ><b>Short description:</b></label> <br />
-            <textarea rows="2" maxlength="100" cols="80" name="short_description"></textarea>
-            <br/>
+          <br />
+          <label ><b>Description:</b></label> <br />
+          <textarea rows="4" cols="80" maxlength="255" name="description"></textarea>
+          <br/>
 
-            <br />
-            <label ><b>Description:</b></label> <br />
-            <textarea rows="4" cols="80" maxlength="255" name="description"></textarea>
-            <br/>
+              <label ><b>Work category:</b></label> <br />
+              <select name="id_category"> 
+                @foreach($offerCategories as $offerCategory)
+                  <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
+                @endforeach
+              </select>
+              <br/>
 
-            <label ><b>Vacancies number: *</b></label> <br />
+              <label ><b>City:</b></label> <br />
+              <input type="text" name="city" value="" size="50" maxlength="80" />
 
-            <input type="text" name="vacancies" value="" size="50" maxlength="80" required/>
-      
-            <br/>
+              <br/>
 
-            <label ><b>Offer Category:</b></label> <br />
-            <select name="id_category"> 
-              @foreach($offerCategories as $offerCategory)
-                <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
-              @endforeach
-            </select>
-            <br/>
+              <label ><b>Status: *</b></label> <br />
+                <input type="radio" name="status" value="0"> Off <br>
+                <input type="radio" name="status" value="1" checked> On <br>         
+             
+              <br/>
 
-            <label ><b>City:</b></label> <br />
-            <input type="text" name="city" value="" size="50" maxlength="80" />
+              <label ><b>Price:</b></label> <br />
+              <input type="text" name="price" value="" size="50" maxlength="80" />
 
-            <br/>
-
-            <label ><b>Offer status: *</b></label> <br />
-              <input type="radio" name="status" value="0"> Off <br>
-              <input type="radio" name="status" value="1" checked> On <br>         
-            
-            <br/>
-
-            <label ><b>Salary:</b></label> <br />
-            <input type="text" name="salary" value="" size="50" maxlength="80" />
-
-            <br/>
-            
-            <br/><br/>
-            <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
-            <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
+              <br/>
+              
+          <br/><br/>
+          <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
+          <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
 
           </form>
         </div>
