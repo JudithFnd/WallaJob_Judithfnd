@@ -38,4 +38,10 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+        // Relación User con UsersProfessionals
+    public function userProfessional() { // one to one
+        return $this->hasOne('App\UsersProfessionals', 'id_user', 'id'); // Le indicamos que se va relacionar con el atributo id
+    }
+    
 }

@@ -51,7 +51,13 @@
   <!-- Find Job Section Start -->
     <section class="find-job section">
         <div class="container">
-            <h2 class="section-title">{{ $offerDetails->name }} <span class="full-time" name="work_schedule">{{$offerDetails->work_schedule}}</span></h2>
+            <h2 class="section-title">{{ $publicationDetails->name }} 
+            @if($publicationDetails->type_professional === 0)
+                <span class="full-time" name="type_professional">
+                I'm Freelancer
+                </span>
+            </h2>
+            @endif
             <br>
             <ul>
             <div class="row">               
@@ -60,30 +66,36 @@
                     <div class="job-list-content">
                         <li name="name">
                                 <h4>Short Description</h4>                                                           
-                                <p>{{$offerDetails->short_description}}</p>
+                                <p>{{$publicationDetails->short_description}}</p>
                                 <hr>
                                 <h4>Description</h4>   
-                                <p class="show_description">{{$offerDetails->description}}</p>
+                                <p class="show_description">{{$publicationDetails->description}}</p>
                                 <div class="job-tag">
                                     <div class="pull-left">
                                         <div class="meta-tag">
                                                      
-                                            <h5><span name="id_category" value="{{ $offerDetails->id_category }}"><i class="ti-briefcase"></i>Category: 
+                                            <h5><span name="id_category" value="{{ $publicationDetails->id_category }}"><i class="ti-briefcase"></i>Category: 
                                             @foreach($offerCategories as $offerCategory)
-                                                @if($offerCategory->id === $offerDetails->id_category)
+                                                @if($offerCategory->id === $publicationDetails->id_category)
                                                     {{ $offerCategory->category }}
                                                 @endif
                                             @endforeach
-                                            </span></h5>              
-                                      
-                                        <h5><span name="vacancies"><i class="ti-face-smile"></i>Vacancies: {{ $offerDetails->vacancies }}</span></h5>
-                                        <h5><span name="city"><i class="ti-location-pin"></i>City: {{ $offerDetails->city }}</span></h5>
-                                        <h5><span name="salary"><i class="ti-money"></i>Salari: {{ $offerDetails->salary }}</span></h5>
+                                            </span></h5>                                                                                           
+                                        <h5><span name="city"><i class="ti-location-pin"></i>City: {{ $publicationDetails->city }}</span></h5>
+                                        @if($publicationDetails->price)
+                                        <h5>
+                                            <span name="price"><i class="ti-money"></i>
+                                            Price: {{ $publicationDetails->price }}
+                                            </span>
+                                        </h5>
+                                        @endif
                                         </div>
                                     </div>
                                                                        
-                                    <div class="pull-right">                                
-                                        <a href="#" class="btn btn-common btn-rm">Inscribe</a>
+                                    <div class="pull-right">  
+                                                               
+                                        <a href="{{ route('showContact', ['id'=>$professionalUser->id_user]) }}" class="btn btn-common btn-rm">Contact</a>
+                                    
                                     </div>                                                                 
                                     
                                 </div>

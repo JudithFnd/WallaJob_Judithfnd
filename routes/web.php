@@ -57,7 +57,9 @@ Route::post('/my-professional-account/publication-professional', 'PublicationPro
 
 // Published professionals
 Route::get('/publications', 'PublicationProfessionalController@publishedProfessionals')->name('publications');
-Route::get('publications/{id}', 'PublicationProfessionalController@show')->name('show_publications');
+Route::get('/publication/contact-professional/{id}', 'PublicationProfessionalController@contactProfessional')->name('showContact');
+Route::get('/publication/{id}', 'PublicationProfessionalController@show')->name('showPublication');
+
 
 
 // more

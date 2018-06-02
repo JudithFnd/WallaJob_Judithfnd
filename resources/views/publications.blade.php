@@ -88,7 +88,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right">                                
-                                        <a href="publications/{{ $publication->id }}" class="btn btn-common btn-rm">More Detail</a>
+                                        <a href="{{ route('showPublication', ['id'=>$publication->id]) }}" class="btn btn-common btn-rm">More Detail</a>
                                     </div>
                                 </div>
                             </a>
