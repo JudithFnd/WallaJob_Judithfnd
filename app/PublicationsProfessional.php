@@ -9,6 +9,6 @@ class PublicationsProfessional extends Model
     protected $table = 'publications_professional';
     public $timestamps = false;
 
-    protected $fillable = ['id', 'id_professional', 'name', 'work_schedule', 'short_description', 'description', 'vacancies', 'id_category', 'city', 'status', 'id_admin', 'salary'];
+    protected $fillable = ['id', 'id_professional', 'name', 'type_professional', 'short_description', 'description', 'id_category', 'city', 'status', 'id_admin', 'price'];
 
 }

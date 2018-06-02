@@ -100,8 +100,8 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                    Freelancer <i class="fa fa-angle"></i>
+                  <a href="{{ route('publications') }}">
+                    Professionals <i class="fa fa-angle"></i>
                     </a>
                   </li>
                   <li>

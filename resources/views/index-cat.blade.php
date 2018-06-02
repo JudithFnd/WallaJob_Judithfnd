@@ -101,9 +101,9 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                      Empresa <i class="fa fa-angle"></i>
-                      </a>
+                    <a href="{{ route('publications') }}">
+                    Professionals <i class="fa fa-angle"></i>
+                    </a>
                     </li>
                     <li>
                       <a class="active" href="{{ route('index') }}">

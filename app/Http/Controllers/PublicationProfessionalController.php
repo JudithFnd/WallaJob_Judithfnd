@@ -25,6 +25,7 @@ class PublicationProfessionalController extends Controller
         $publication = new PublicationsProfessional;
         $publication->id_professional = $request->id_professional;
         $publication->name = $request->name;
+        $publication->type_professional = $request->type_professional;
         $publication->short_description = $request->short_description;
         $publication->description = $request->description;
         $publication->id_category = $request->id_category;
@@ -39,16 +40,16 @@ class PublicationProfessionalController extends Controller
 
     }
     
-    public function publishedOffers() // published offers view
+    public function publishedProfessionals() // published offers view
     {
-        $offers = CompanyOffers::all();
-       return view('offers', ['companyOffers' => $offers], ['offerCategories' => Category::all()]);
+        $publications = PublicationsProfessional::all();
+       return view('publications', ['publicationsProfessionals' => $publications], ['offerCategories' => Category::all()]);
     }
 
-    public function show($id)
+    public function show($id) // show publication
     {
-        $offerDetails = CompanyOffers::find($id);
-        return view('show_offer', ['offerDetails' => $offerDetails], ['offerCategories' => Category::all()]);
+        $publicationDetails = PublicationsProfessional::find($id);
+        return view('show_publications', ['offerDetails' => $publicationDetails], ['offerCategories' => Category::all()]);
     }
 
 }

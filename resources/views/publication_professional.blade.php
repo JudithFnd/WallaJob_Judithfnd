@@ -105,8 +105,8 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                    Freelancer <i class="fa fa-angle"></i>
+                    <a href="{{ route('publications') }}">
+                    Professionals <i class="fa fa-angle"></i>
                     </a>
                   </li>
                   <li>
@@ -237,6 +237,11 @@
 
           <label ><b>Title: *</b></label> <br />
           <input type="text" name="name" value="" size="20" maxlength="30" required/>
+
+            <label ><b>Type professional: *</b></label> <br />
+                <input type="radio" name="type_professional" value="0"> I'm freelancer <br>
+                <input type="radio" name="type_professional" value="1" checked> I'm not freelancer <br>                      
+            <br/>
 
           <label ><b>Short description:</b></label> <br />
           <textarea rows="2" maxlength="100" cols="80" name="short_description"></textarea>
