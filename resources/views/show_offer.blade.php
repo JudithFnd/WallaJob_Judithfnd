@@ -80,18 +80,19 @@
                                         <h5><span name="city"><i class="ti-location-pin"></i>City: {{ $offerDetails->city }}</span></h5>
                                         <h5><span name="salary"><i class="ti-money"></i>Salari: {{ $offerDetails->salary }}</span></h5>
                                         </div>
-                                    </div>
-                                    @foreach($offerInscriptions as $offerInscription)
-                                        @if($offerInscription->id_professional === auth()->user()->id )                                      
+                                    </div>                                 
+
+                                    @if( auth()->check() )
                                         <div class="pull-right">                                                                                         
                                             <a href="{{ route('inscription', ['id' => $offerDetails->id]) }}" class="btn btn-common btn-rm">Subscribe</a>
-                                        </div>  
-                                        @else
-                                        <div class="pull-right">                                                                                         
-                                            <p>Ya te has inscrito</p>
+                                        </div> 
+                                    @else
+                                    <div class="pull-right">                                                                                         
+                                            <h5 style="color:red;">You have to sign in to subscribe</h5>
                                         </div>
-                                        @endif  
-                                    @endforeach                                                                                            
+                                    @endif 
+                                    
+
                                 </div>                                
                         </li>
                     </div>

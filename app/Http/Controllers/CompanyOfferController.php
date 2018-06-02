@@ -55,10 +55,10 @@ class CompanyOfferController extends Controller
     public function show(Request $request, $id)
     {
         $flashMessage = $request->session()->get('inscription_status');
-       
+        
         $offerDetails = CompanyOffers::find($id);
-        $offerInscriptions = OfferInscriptions::all();
-        return view('show_offer', ['offerDetails' => $offerDetails, 'offerCategories' => Category::all(), 'offerInscriptions' => $offerInscriptions]);
+        
+        return view('show_offer', ['offerDetails' => $offerDetails, 'offerCategories' => Category::all()]);
     }
 
     public function inscribe(Request $request, $offerId)
