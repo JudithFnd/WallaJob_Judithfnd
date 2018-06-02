@@ -41,7 +41,12 @@ Route::post('/my-company-account/company-offer', 'CompanyOfferController@store')
 
 // Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
+
+// Show offer
 Route::get('offers/{id}', 'CompanyOfferController@show')->name('show_offer');
+
+// Show offer -> Inscription 
+Route::get('/offer/inscription/{id}', 'CompanyOfferController@inscribe')->name('inscription');
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////

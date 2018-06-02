@@ -12,7 +12,10 @@ class User extends Authenticatable
     protected $table = 'users';
     public $timestamps = false;
 
-    
+    public function getId()
+    {
+    return $this->id;
+    }
     /**
      * The attributes that are mass assignable.
      *

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Category;
 use App\CompanyOffers;
+use App\OfferInscriptions;
+use Illuminate\Support\Facades\Auth;
+
 
 class CompanyOfferController extends Controller
 {
@@ -46,13 +49,28 @@ class CompanyOfferController extends Controller
     public function publishedOffers() // published offers view
     {
         $offers = CompanyOffers::all();
-       return view('offers', ['companyOffers' => $offers], ['offerCategories' => Category::all()]);
+       return view('offers', ['companyOffers' => $offers, 'offerCategories' => Category::all()]);
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
+        $flashMessage = $request->session()->get('inscription_status');
+       
         $offerDetails = CompanyOffers::find($id);
-        return view('show_offer', ['offerDetails' => $offerDetails], ['offerCategories' => Category::all()]);
+        $offerInscriptions = OfferInscriptions::all();
+        return view('show_offer', ['offerDetails' => $offerDetails, 'offerCategories' => Category::all(), 'offerInscriptions' => $offerInscriptions]);
+    }
+
+    public function inscribe(Request $request, $offerId)
+    { 
+        $inscription = new OfferInscriptions;          
+        $inscription->id_professional =  Auth::user()->userProfessional->id;
+        $inscription->id_offer = $offerId;
+        $inscription->save();
+
+        $request->session()->flash('inscription_status', 'You have been subscribed succesfully');
+
+        return redirect()->route('show_offer', ['id' => $offerId]);
     }
 
 }

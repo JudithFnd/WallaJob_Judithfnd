@@ -51,7 +51,9 @@
   <!-- Find Job Section Start -->
     <section class="find-job section">
         <div class="container">
+        <br>
             <h2 class="section-title">{{ $publicationDetails->name }} 
+            <br>
             @if($publicationDetails->type_professional === 0)
                 <span class="full-time" name="type_professional">
                 I'm Freelancer

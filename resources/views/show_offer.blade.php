@@ -81,13 +81,18 @@
                                         <h5><span name="salary"><i class="ti-money"></i>Salari: {{ $offerDetails->salary }}</span></h5>
                                         </div>
                                     </div>
-                                                                       
-                                    <div class="pull-right">                                
-                                        <a href="#" class="btn btn-common btn-rm">Inscribe</a>
-                                    </div>                                                                 
-                                    
-                                </div>
-                            
+                                    @foreach($offerInscriptions as $offerInscription)
+                                        @if($offerInscription->id_professional === auth()->user()->id )                                      
+                                        <div class="pull-right">                                                                                         
+                                            <a href="{{ route('inscription', ['id' => $offerDetails->id]) }}" class="btn btn-common btn-rm">Subscribe</a>
+                                        </div>  
+                                        @else
+                                        <div class="pull-right">                                                                                         
+                                            <p>Ya te has inscrito</p>
+                                        </div>
+                                        @endif  
+                                    @endforeach                                                                                            
+                                </div>                                
                         </li>
                     </div>
                 </div>
@@ -96,7 +101,13 @@
                 
                 </div>
             </ul>
-        
+            
+            @if(Session::has('inscription_status'))
+            <div class="alert alert-success">
+                {{Session::get('inscription_status')}}
+                </div>
+            @endif
+
         </div>
     </section>
   <!-- Find Job Section End -->

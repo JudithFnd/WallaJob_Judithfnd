@@ -51,7 +51,8 @@
   <!-- Find Job Section Start -->
     <section class="find-job section">
         <div class="container">
-            <h2 class="section-title">New professionals</h2>
+        <br>
+            <h2 class="section-title" style="color:#337ab7;">New professionals</h2><br>
                            
             <ul>
             <div class="row">
@@ -61,14 +62,14 @@
                 <div class="job-list">
                     <div class="job-list-content">
                         <li name="name">
-                            <a href="publications/{{ $publication->id }}">
-                                <h4>{{ $publication->name }}
+                            <a href="{{ route('showPublication', ['id'=>$publication->id]) }}">
+                                <h4 style="color:#337ab7;">{{ $publication->name }}
                                 @if($publication->type_professional === 0)
                                     <span class="full-time" name="type_professional">
                                     I'm Freelancer
-                                    </span>
-                                </h4>
+                                    </span>                                
                                 @endif
+                                </h4>
                                 <p>{{$publication->short_description}}</p>
                                 <div class="job-tag">
                                     <div class="pull-left">

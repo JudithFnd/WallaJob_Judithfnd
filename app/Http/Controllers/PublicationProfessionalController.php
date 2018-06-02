@@ -56,8 +56,7 @@ class PublicationProfessionalController extends Controller
     }
 
     public function contactProfessional($id) // contact professional
-    {        
-        
+    {                
         $user = User::find($id);
         $professionalUser = $user->userProfessional;                        
         return view('contact_professional', ['userInformation' => $user, 'professionalInformation' => $professionalUser]);
