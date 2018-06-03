@@ -51,6 +51,11 @@
   <!-- show offer Section Start -->
     <section class="find-job section">
         <div class="container">
+        @if(Session::has('inscription_status') && Session::has('inscription_status_color'))
+            <div class="alert {{ Session::get('inscription_status_color') }}">
+                {{Session::get('inscription_status')}}
+                </div>
+            @endif
             <h2 class="section-title">{{ $offerDetails->name }} <span class="full-time" name="work_schedule">{{$offerDetails->work_schedule}}</span></h2>
             <br>
             <ul>
@@ -103,11 +108,7 @@
                 </div>
             </ul>
             
-            @if(Session::has('inscription_status') && Session::has('inscription_status_color'))
-            <div class="alert {{ Session::get('inscription_status_color') }}">
-                {{Session::get('inscription_status')}}
-                </div>
-            @endif
+            
 
         </div>
     </section>

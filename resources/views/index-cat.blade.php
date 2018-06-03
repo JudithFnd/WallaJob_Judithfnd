@@ -209,7 +209,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Troba el treball que s'adapti a la teva vida</h1><br><h2>¡Més de <strong>12,000</strong> treballs t'estan esperant a WallaJob!</h2>
+              <h1>Troba el treball que s'adapti a la teva vida</h1><br><br>
               <div class="content">
                 <form method="" action="">
                   <div class="row">
@@ -248,13 +248,6 @@
                   </div>
                 </form>
               </div>
-              <div class="popular-jobs">
-                <b>Paraules clau populars: </b>
-                <a href="#">Disseny web</a>
-                <a href="#">Gerent</a>
-                <a href="#">Programació</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -262,127 +255,96 @@
     <!-- end intro section -->
     </div>
     
-    <!-- Find Job Section Start -->
-    <section class="find-job section">
+   <!-- Find Job Section Start -->
+   <section class="find-job section">
+        <div class="container">
+            <h2 class="section-title">Noves ofertes</h2>
+            <div style="width: 105%; height: 765px; overflow-y: scroll; overflow-x: hidden;">
+              <ul>
+              <div class="row">
+                  @foreach($companyOffers as $offer)                
+                  <div class="col-md-12">    
+                  <div class="job-list">
+                      <div class="job-list-content">
+                          <li name="name">
+                              <a href="offers/{{ $offer->id }}">
+                                  <h4>{{ $offer->name }}<span class="full-time" name="work_schedule">{{$offer->work_schedule}}</span></h4>
+                                  <p>{{$offer->short_description}}</p>
+                                  <div class="job-tag">
+                                      <div class="pull-left">
+                                          <div class="meta-tag">
+                                                      
+                                              <span name="id_category" value="{{ $offer->id_category }}"><i class="ti-briefcase"></i>
+                                              @foreach($offerCategories as $offerCategory)
+                                                  @if($offerCategory->id === $offer->id_category)
+                                                      {{ $offerCategory->category }}
+                                                  @endif
+                                              @endforeach
+                                              </span>                         
+                                        
+                                          <span name="city"><i class="ti-location-pin"></i>{{ $offer->city }}</span>
+                                          <span name="salary"><i class="ti-money"></i>{{ $offer->salary }}</span>
+                                          </div>
+                                      </div>
+                                      <div class="pull-right">                                
+                                          <a href="offers/{{ $offer->id }}" class="btn btn-common btn-rm">More Detail</a>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      </div>
+                  </div>
+                  </div>
+                  @endforeach
+                  
+                  </div>
+              </ul>
+          </div>               
+        </div>
+    </section>
+    <!-- Find Job Section End -->
+
+        <!-- Counter Section Start -->
+        <section id="counter">
       <div class="container">
-        <h2 class="section-title">Treballs populars</h2>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="job-list">
-              <div class="thumb">
-                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-1.jpg') }}" alt=""></a>
+        <div class="row">          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting">
+              <div class="icon">
+                <i class="ti-briefcase"></i>
               </div>
-              <div class="job-list-content">
-                <h4><a href="{{ route('bookmarked') }}">Dissenyador Web</a><span class="full-time">Temps complet</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
-                <div class="job-tag">
-                  <div class="pull-left">
-                    <div class="meta-tag">
-                      <span><a href="browse-categories.html"><i class="ti-brush"></i>Disseny artístic</a></span>
-                      <span><i class="ti-location-pin"></i>Tarragona, España</span>
-                      <span><i class="ti-time"></i>60/Hores</span>
-                    </div>
-                  </div>
-                  <div class="pull-right">
-                    <div class="icon">
-                      <i class="ti-heart"></i>
-                    </div>
-                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job-list">
-              <div class="thumb">
-                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-2.jpg') }}" alt=""></a>
-              </div>
-              <div class="job-list-content">
-                <h4><a href="{{ route('bookmarked') }}">Desenvolupador de Front-End</a><span class="full-time">Temps complet</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
-                <div class="job-tag">
-                  <div class="pull-left">
-                    <div class="meta-tag">
-                      <span><a href="browse-categories.html"><i class="ti-desktop"></i>Tecnologies</a></span>
-                      <span><i class="ti-location-pin"></i>Barcelona, España</span>
-                      <span><i class="ti-time"></i>60/Hores</span>
-                    </div>
-                  </div>
-                  <div class="pull-right">
-                    <div class="icon">
-                      <i class="ti-heart"></i>
-                    </div>
-                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job-list">
-              <div class="thumb">
-                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-3.jpg') }}" alt=""></a>
-              </div>
-              <div class="job-list-content">
-                <h4><a href="{{ route('bookmarked') }}">Contador Sènior</a><span class="part-time">Temps Partit</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
-                <div class="job-tag">
-                  <div class="pull-left">
-                    <div class="meta-tag">
-                      <span><a href="browse-categories.html"><i class="ti-home"></i>Finances</a></span>
-                      <span><i class="ti-location-pin"></i>Reus, España</span>
-                      <span><i class="ti-time"></i>60/Hores</span>
-                    </div>
-                  </div>
-                  <div class="pull-right">
-                    <div class="icon">
-                      <i class="ti-heart"></i>
-                    </div>
-                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job-list">
-              <div class="thumb">
-                <a href="{{ route('bookmarked') }}"><img src= "{{ asset('img/jobs/img-4.jpg') }}" alt=""></a>
-              </div>
-              <div class="job-list-content">
-                <h4><a href="{{ route('bookmarked') }}">Desenvolupador web Fullstack </a><span class="full-time">Temps complet</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
-                <div class="job-tag">
-                  <div class="pull-left">
-                    <div class="meta-tag">
-                      <span><a href="browse-categories.html"><i class="ti-desktop"></i>Tecnologies</a></span>
-                      <span><i class="ti-location-pin"></i>Madrid, España</span>
-                      <span><i class="ti-time"></i>60/Hores</span>
-                    </div>
-                  </div>
-                  <div class="pull-right">
-                    <div class="icon">
-                      <i class="ti-heart"></i>
-                    </div>
-                    <a href="{{ route('bookmarked') }}" class="btn btn-common btn-rm">Més Detalls</a>
-                  </div>
-                </div>
+              <div class="desc">                
+                <h2>Job offers</h2>
+                <h1 class="counter">{{ count($companyOffers) }}</h1>
               </div>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="showing pull-left">
-              <a href="#">Visualitzant <span>6-10</span> de 24 Treballs</a>
-            </div>                    
-            <ul class="pagination pull-right">              
-              <li class="active"><a href="#" class="btn btn-common" ><i class="ti-angle-left"></i> Anterior</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li class="active"><a href="#" class="btn btn-common">Següent <i class="ti-angle-right"></i></a></li>
-            </ul>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting">
+              <div class="icon">
+                <i class="ti-user"></i>
+              </div>
+              <div class="desc">
+                <h2>Professionals published</h2>
+                <h1 class="counter">{{ count($publicationsProfessionals) }}</h1>                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting">
+              <div class="icon">
+                <i class="ti-heart"></i>
+              </div>
+              <div class="desc">
+                <h2>Users</h2>
+                <h1 class="counter">{{count($users)}}</h1>                
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Find Job Section End -->
+    <!-- Counter Section End -->
 
     
 

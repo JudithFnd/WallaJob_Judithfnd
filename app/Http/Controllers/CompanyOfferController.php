@@ -69,7 +69,7 @@ class CompanyOfferController extends Controller
 
         $user = Auth::user();
         
-        if ($user->type_user === 1) {
+        if ($user->type_user === 1) { // check tpe user
             $statusMessage = 'Companies cant subscribe to offers';    
         } else {
             $professionalUserId = $user->userProfessional->id;
@@ -77,7 +77,7 @@ class CompanyOfferController extends Controller
                                       ->where('id_professional','=', $professionalUserId)
                                       ->get();
             
-            if ($offer->isEmpty()) {
+            if ($offer->isEmpty()) { // if this user don't have a subscription in the offer, save the subscription in db
                 $inscription = new OfferInscriptions;          
                 $inscription->id_professional =  $professionalUserId;
                 $inscription->id_offer = $offerId;
