@@ -105,7 +105,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="{{ route('publications') }}">
+                  <a href="{{ route('publications') }}">
                     Professionals <i class="fa fa-angle"></i>
                     </a>
                   </li>
@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">My account</h2>
+                <h2 class="product-title">My Curriculum</h2>
                 <ol class="breadcrumb">
-                  <li><a href="{{ route('index') }}"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">My account</li>
+                  <li><a href="#"><i class="ti-home"></i> Home</a></li>
+                  <li class="current">My Curriculum</li>
                 </ol>
               </div>
             </div>
@@ -220,15 +220,34 @@
       </div>
       <!-- Page Header End -->   
 
-      <section class="section text-center" >
-      <h3>Hi {{ auth()->user()->name }}, welcome to your profile</h3><br>
- 
+      <section class="section" >
       <div class="container">
-                
-                <button class="btn btn-common btn-large"><a href="{{ route('companyData') }}">Company data</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="{{ route('companyOffer') }}">Post a job</a></button><br><br>
-                <button class="btn btn-common btn-large"><a href="{{ route('showMyCompanyOffers') }}">My offers</a></button><br><br>
-                
+        <br>
+          <h2 class="section-title">Curriculum Vitae
+          <br><br>
+          <ul>
+          <div class="row">               
+          <div class="col-md-12">    
+                <div class="job-list">
+                    <div class="job-list-content">
+                      <div class="col-md-12">    
+                      
+                        @foreach($subscribedUsersInOffers as $subscribedUser)
+                          
+                        <li> {{ $subscribedUser->getProfessionalUser->name }}</li> 
+                          
+                        @endforeach
+                      
+                      </div>
+                    </div>
+                </div>
+              </div>
+              
+              </div>
+          </ul>
+      
+        </div>
+
         </div>
       </div>
     </section>  
@@ -252,7 +271,6 @@
     <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
-
       
   </body>
 </html>

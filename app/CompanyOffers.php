@@ -15,4 +15,9 @@ class CompanyOffers extends Model
     {
         return $query->where('name', 'LIKE', "%$name%");
     }
+
+    public function getSubscribedUsers()
+    {
+        return $this->hasMany('App\OfferInscriptions', 'id_offer', 'id');
+    }
 }

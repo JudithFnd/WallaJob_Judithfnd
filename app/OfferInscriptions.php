@@ -11,4 +11,9 @@ class OfferInscriptions extends Model
 
     protected $fillable = ['id', 'id_offer', 'id_professional'];
 
+    public function getProfessionalUser()
+    {
+        return $this->hasOne('App\UsersProfessionals', 'id', 'id_professional');
+    }
+
 }

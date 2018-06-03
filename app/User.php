@@ -47,4 +47,8 @@ class User extends Authenticatable
         return $this->hasOne('App\UsersProfessionals', 'id_user', 'id'); // Le indicamos que se va relacionar con el atributo id
     }
     
+    // Relación User con UserCompany
+    public function companyOffers() { // many
+        return $this->hasMany('App\CompanyOffers', 'id_company', 'id'); // Le indicamos que se va relacionar con el atributo id
+    }
 }

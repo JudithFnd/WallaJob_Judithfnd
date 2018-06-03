@@ -11,4 +11,9 @@ class UsersProfessionals extends Model
 
     protected $fillable = ['id', 'id_user', 'name', 'surname', 'surname2', 'birthdate', 'dni', 'sex', 'country', 'city', 'direction', 'phone_number', 'studies', 'work_experience', 'image'];
 
+    public function getUser()
+    {
+        return $this->hasOne('App\User', 'id', 'id_user');
+    }
+
 }

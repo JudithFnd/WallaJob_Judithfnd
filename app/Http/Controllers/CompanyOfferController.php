@@ -101,4 +101,19 @@ class CompanyOfferController extends Controller
         return view('result_search', ['offerCategories' => Category::all()])->with('companyOffers', $companyOffers);
     }
 
+    public function showMyOffers()
+    {
+        $companyOffer = Auth::user()->companyOffers;
+        //$subscribedUsers = $companyOffer[0]->getSubscribedUsers->count();
+        return view('my_company_offers', ['companyOffers' => $companyOffer, 'offerCategories' => Category::all()]);
+    }
+
+    public function showSubscribedUsersInOffers($idOffer)
+    {
+        $subscribedUsersInOffers = CompanyOffers::find($idOffer)->getSubscribedUsers;
+        
+        return view('show_subscribed_users_offer', ['subscribedUsersInOffers' => $subscribedUsersInOffers]);
+    }
+
+
 }

@@ -36,6 +36,10 @@ Route::post('/my-company-account/company-data', 'CompanyDataController@store');
 // Post a job
 Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
 Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
+// My company offers
+Route::get('/my-company-account/my-offers', 'CompanyOfferController@showMyOffers')->name('showMyCompanyOffers');
+// My subscribed users
+Route::get('/my-company-account/my-offer/{id}/subscribed', 'CompanyOfferController@showSubscribedUsersInOffers')->name('showSubscribedUsersInOffers');
 
 // Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
