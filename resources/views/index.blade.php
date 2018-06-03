@@ -204,17 +204,17 @@
             <div class="col-md-12">
               <h1>Find the job that fits your life</h1><br><br>
               <div class="content">
-                <form method="" action="">
+                <form method="GET" action="{{ route('search') }}">
                   <div class="row">
                     <div class="col-md-4 col-sm-6">
                       <div class="form-group">
-                        <input class="form-control" type="text" placeholder="job title / keywords / company name">
+                        <input class="form-control" type="text" name="name" placeholder="job title / keywords / company name">
                         <i class="ti-time"></i>
                       </div>
                     </div>
                  
                     <div class="col-md-1 col-sm-6">
-                      <button type="button" class="btn btn-search-icon"><i class="ti-search"></i></button>
+                      <button type="submit" id="search" class="btn btn-search-icon"><i class="ti-search"></i></button>
                     </div>
                   </div>
                 </form>

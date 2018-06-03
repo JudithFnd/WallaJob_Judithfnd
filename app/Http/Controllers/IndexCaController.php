@@ -23,4 +23,6 @@ class IndexCaController extends Controller
                               'offerCategories' => Category::all()
                               ]);
     }
+
+    
 }

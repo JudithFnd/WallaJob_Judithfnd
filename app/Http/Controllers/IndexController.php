@@ -15,13 +15,13 @@ class IndexController extends Controller
     {
         $offers = CompanyOffers::all();        
         $users = User::all();
-        $publicationsProfessionals = PublicationsProfessional::all();
-        
+        $publicationsProfessionals = PublicationsProfessional::all();                
+
        return view('index',  ['users' => $users,                               
                               'companyOffers' => $offers, 
                               'publicationsProfessionals' => $publicationsProfessionals,
                               'offerCategories' => Category::all()
                               ]);
-    }
-    
+    }  
+
 }

@@ -12,6 +12,8 @@
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/indexEs', 'IndexEsController@indexEs')->name('indexEs');
 Route::get('/indexCa', 'IndexCaController@indexCa')->name('indexCa');
+//Search
+Route::get('/index/search-results', 'CompanyOfferController@searchName')->name('search');
 
 // Sign up
 Route::get('/register', 'RegistrationController@create')->name('signup');

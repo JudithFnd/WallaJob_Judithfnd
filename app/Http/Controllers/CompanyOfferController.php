@@ -32,7 +32,6 @@ class CompanyOfferController extends Controller
         $offer->work_schedule = $request->work_schedule;
         $offer->short_description = $request->short_description;
         $offer->description = $request->description;
-        //$offer->publication_date;
         $offer->vacancies = $request->vacancies;
         $offer->id_category = $request->id_category;
         $offer->city = $request->city;
@@ -91,6 +90,15 @@ class CompanyOfferController extends Controller
         $request->session()->flash('inscription_status_color', $cssClass);
         
         return redirect()->route('show_offer', ['id' => $offerId]);
+    }
+
+        
+    public function searchName(Request $request)
+    {
+          
+        $search = CompanyOffers::Search($request->name)->get();    
+      
+        return view('result_search')->with('search', $search);
     }
 
 }
