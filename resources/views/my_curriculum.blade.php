@@ -232,18 +232,17 @@
                     <div class="job-list-content">
                       <div class="col-md-12">    
                       <li>
-                        <h4 name="name">Name:</h4><hr>
-                        <h4 name="surname">Surname</h4><hr>
-                        <h4 name="surname2">Segond Surname</h4><hr>
-                        <h4 name="birthdate">Birthdate</h4><hr>
-                        <h4 name="dni">DNI</h4><hr>
-                        <h4 name="sex">Sex</h4><hr>
-                        <h4 name="country">Country</h4><hr>
-                        <h4 name="city">City</h4><hr>
-                        <h4 name="direction">Direction</h4><hr>
-                        <h4 name="phone_number">Phone number</h4><hr>
-                        <h4 name="studies">Studies / knowledges</h4><hr>
-                        <h4 name="work_experience">Work experience</h4><hr>
+                        <h4 name="name">Name: {{ $cv->name }}</h4><hr>
+                        <h4 name="surname">Surname: {{ $cv->surname }}</h4><hr>
+                        <h4 name="surname2">Second Surname: {{ $cv->surname2 }}</h4><hr>                        
+                        <h4 name="dni">DNI: {{ $cv->dni }}</h4><hr>
+                        <h4 name="sex">Gender: {{ $cv->sex }}</h4><hr>
+                        <h4 name="country">Country: {{ $cv->country }}</h4><hr>
+                        <h4 name="city">City: {{ $cv->city }}</h4><hr>
+                        <h4 name="direction">Direction: {{ $cv->direction }}</h4><hr>
+                        <h4 name="phone_number">Phone number: {{ $cv->phone_number }}</h4><hr>
+                        <h4 name="studies">Studies / knowledges: {{ $cv->studies }}</h4><hr>
+                        <h4 name="work_experience">Work experience: {{ $cv->work_experience }}</h4><hr>
                         
                       </li> 
                       </div>

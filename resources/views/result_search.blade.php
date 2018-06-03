@@ -52,7 +52,7 @@
     <section class="find-job section">
         <div class="container">
         <br>
-            <h2 class="section-title" style="color:#337ab7;">Result search</h2><br>
+            <h2 class="section-title" style="color:#337ab7;">Search result</h2><br>
             <ul>
             <div class="row">
             
@@ -61,7 +61,7 @@
                 <div class="job-list">
                     <div class="job-list-content">
                         <li name="name">
-                            <a href="offers/{{ $offer->id }}">
+                            <a href="{{ route('show_offer', ['id'=>$offer->id]) }}">
                                 <h4>{{ $offer->name }}<span class="full-time" name="work_schedule">{{$offer->work_schedule}}</span></h4>
                                 <p>{{$offer->short_description}}</p>
                                 <div class="job-tag">
@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right">                                
-                                        <a href="offers/{{ $offer->id }}" class="btn btn-common btn-rm">More Detail</a>
+                                        <a href="{{ route('show_offer', ['id'=>$offer->id]) }}" class="btn btn-common btn-rm">More Detail</a>
                                     </div>
                                 </div>
                             </a>

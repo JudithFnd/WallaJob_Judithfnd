@@ -47,7 +47,7 @@ class CurriculumController extends Controller
 
     public function show()
     {        
-        //$curriculum = UsersProfessionals::find($id);
-        return view('my_curriculum');
+        $curriculum = Auth::user()->userProfessional;
+        return view('my_curriculum', ['cv' => $curriculum]);
     }
 }

@@ -257,8 +257,8 @@
 
           <br/>
           <label ><b>Sex:</b></label> <br />
-          <input type="radio" name="sex" value="0" checked="checked" /> Man<br/>
-          <input type="radio" name="sex" value="1" /> Woman
+          <input type="radio" name="sex" value="Man" checked="checked" /> Man<br/>
+          <input type="radio" name="sex" value="Woman" /> Woman
 
           <br/>
           <label ><b>Country:</b></label> <br />
