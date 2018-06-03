@@ -232,7 +232,7 @@
                     <div class="job-list-content">
                       <div class="col-md-12">    
                       <li>
-                        <h4 name="name">Name:</h4><hr>                        
+                        <h4 name="name">Name:</h4><hr>
                         <h4 name="surname">Surname</h4><hr>
                         <h4 name="surname2">Segond Surname</h4><hr>
                         <h4 name="birthdate">Birthdate</h4><hr>
@@ -242,6 +242,8 @@
                         <h4 name="city">City</h4><hr>
                         <h4 name="direction">Direction</h4><hr>
                         <h4 name="phone_number">Phone number</h4><hr>
+                        <h4 name="studies">Studies / knowledges</h4><hr>
+                        <h4 name="work_experience">Work experience</h4><hr>
                         
                       </li> 
                       </div>

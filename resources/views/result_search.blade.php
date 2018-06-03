@@ -53,9 +53,46 @@
         <div class="container">
         <br>
             <h2 class="section-title" style="color:#337ab7;">Result search</h2><br>
-            @foreach($search as $s)
-            <h4 name="name"> {{$s->name}} </h4>
-            @endforeach
+            <ul>
+            <div class="row">
+            
+                @foreach($companyOffers as $offer)                
+                <div class="col-md-12">    
+                <div class="job-list">
+                    <div class="job-list-content">
+                        <li name="name">
+                            <a href="offers/{{ $offer->id }}">
+                                <h4>{{ $offer->name }}<span class="full-time" name="work_schedule">{{$offer->work_schedule}}</span></h4>
+                                <p>{{$offer->short_description}}</p>
+                                <div class="job-tag">
+                                    <div class="pull-left">
+                                        <div class="meta-tag">
+                                                     
+                                            <span name="id_category" value="{{ $offer->id_category }}"><i class="ti-briefcase"></i>
+                                            @foreach($offerCategories as $offerCategory)
+                                                @if($offerCategory->id === $offer->id_category)
+                                                    {{ $offerCategory->category }}
+                                                @endif
+                                            @endforeach
+                                            </span>                         
+                                      
+                                        <span name="city"><i class="ti-location-pin"></i>{{ $offer->city }}</span>
+                                        <span name="salary"><i class="ti-money"></i>{{ $offer->salary }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">                                
+                                        <a href="offers/{{ $offer->id }}" class="btn btn-common btn-rm">More Detail</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                </div>
+                @endforeach
+                
+                </div>
+            </ul>
         
 
         </div>

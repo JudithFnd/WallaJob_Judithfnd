@@ -281,7 +281,7 @@
 
           <br/>
 
-          <label ><b>Studies:</b></label> <br />
+          <label ><b>Studies / knowledges:</b></label> <br />
           <input type="text" name="studies" value="" size="100000"  />
             
           <br/>

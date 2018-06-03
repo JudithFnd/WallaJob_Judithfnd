@@ -96,9 +96,9 @@ class CompanyOfferController extends Controller
     public function searchName(Request $request)
     {
           
-        $search = CompanyOffers::Search($request->name)->get();    
-      
-        return view('result_search')->with('search', $search);
+        $companyOffers = CompanyOffers::Search($request->name)->get();    
+        
+        return view('result_search', ['offerCategories' => Category::all()])->with('companyOffers', $companyOffers);
     }
 
 }

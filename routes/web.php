@@ -15,6 +15,7 @@ Route::get('/indexCa', 'IndexCaController@indexCa')->name('indexCa');
 //Search
 Route::get('/index/search-results', 'CompanyOfferController@searchName')->name('search');
 
+
 // Sign up
 Route::get('/register', 'RegistrationController@create')->name('signup');
 Route::post('register', 'RegistrationController@store')->name('createUser');

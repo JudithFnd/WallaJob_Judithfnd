@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\UsersProfessionals;
 use App\Category;
+use Illuminate\Support\Facades\Auth;
 
 class CurriculumController extends Controller
 {
@@ -46,6 +47,7 @@ class CurriculumController extends Controller
 
     public function show()
     {        
+        //$curriculum = UsersProfessionals::find($id);
         return view('my_curriculum');
     }
 }
