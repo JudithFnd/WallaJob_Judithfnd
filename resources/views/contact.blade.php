@@ -263,32 +263,64 @@
             </div>
             <div class="col-md-8">
               <!-- Form -->
-              <form id="contactForm" class="contact-form" data-toggle="validator">
+              <!-- <form action="mailto:help@wallajob.com"  enctype="text/plain" id="contactForm" class="contact-form">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required data-error="Please enter your name">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required >
                           <div class="help-block with-errors"></div>
                         </div>                    
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">                      
-                          <input type="email" class="form-control" id="email" placeholder="mail@sitename.com" required data-error="Please enter your email">
+                          <input type="text" class="form-control" id="email" name="email" placeholder="mail@sitename.com" required >
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group"> 
-                          <textarea class="form-control" placeholder="Massage" rows="11" data-error="Write your message" required></textarea>
+                          <textarea type="text" class="form-control" placeholder="Massage" name="coment" rows="11" required></textarea>
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <button type="submit" id="submit" class="btn btn-common">Send Us</button>
+                        <input type="submit" value="Send Us" id="submit" class="btn btn-common"></input>
+                        
                         <div id="msgSubmit" class="h3 text-center hidden"></div> 
                         <div class="clearfix"></div>   
+                      </div>
+                    </div>
+                  </div>                     
+                </div> 
+              </form> -->
+              <hr>
+              <form action="mailto:help@wallajob.com" method="post" enctype="text/plain">
+
+              <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="name" name="Full Name " placeholder="Full Name"><br>
+                          <div class="help-block with-errors"></div>
+                        </div>                    
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="email" name="Email " placeholder="mail@sitename.com"><br>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input  style=" height: 10em;" class="form-control" placeholder="Massage" name="Massage " rows="11"><br><br>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <input type="submit" value="Send US" id="submit" class="btn btn-common">
                       </div>
                     </div>
                   </div>                     
@@ -300,21 +332,21 @@
       </section>
       <!-- End Contact Us Section  -->
 
-      <section class="section text-center" >
+      <!-- <section class="section text-center" >
       <div class="container">
                 <!-- Start Animations Text -->
-                <h1>
+                <!-- <h1>
 
                     Page under construction
                 </h1>
-              <br>
+              <br> -->
                 <!-- End Animations Text -->
 
                 <!-- Start Buttons -->
-                <a rel="nofollow" target="_blank" href="javascript:history.back(-1);" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Go back</a>
+                <!-- <a rel="nofollow" target="_blank" href="javascript:history.back(-1);" class="btn btn-common btn-large"><i class="fa fa-cart"></i> Go back</a>
         </div>
       </div>
-    </section>    
+    </section>     --> 
     
     @include('footer')
         
