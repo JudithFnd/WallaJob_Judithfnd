@@ -244,12 +244,12 @@
             <br/>
 
           <label ><b>Short description:</b></label> <br />
-          <textarea rows="2" maxlength="100" cols="80" name="short_description"></textarea>
+          <textarea rows="2" maxlength="100" cols="255" name="short_description"></textarea>
           <br/>
 
           <br />
           <label ><b>Description:</b></label> <br />
-          <textarea rows="4" cols="80" maxlength="255" name="description"></textarea>
+          <textarea rows="4" cols="80" maxlength="100000" name="description"></textarea>
           <br/>
 
               <label ><b>Work category:</b></label> <br />

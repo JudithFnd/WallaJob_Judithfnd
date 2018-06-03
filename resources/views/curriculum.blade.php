@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">Register</h2>
+                <h2 class="product-title">Fill your curriculum</h2>
                 <ol class="breadcrumb">
                   <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">Register</li>
+                  <li class="current">Fill your curriculum</li>
                 </ol>
               </div>
             </div>
@@ -225,7 +225,7 @@
        
         <!-- company data form -->
 
-          <form id="form_login" name="miform" form method="POST" action="/my-professional-account/my-curriculum">
+          <form id="form_login" name="miform" form method="POST" action="/my-professional-account/create-curriculum">
           {{ csrf_field() }}
             <h1>Fill your Curriculum</h1>
             <hr>
@@ -278,6 +278,17 @@
 
           <label ><b>Phone Number:</b></label> <br />
           <input type="text" name="phone_number" value="" size="50" maxlength="15" />
+
+          <br/>
+
+          <label ><b>Studies:</b></label> <br />
+          <input type="text" name="studies" value="" size="100000"  />
+            
+          <br/>
+
+          <label ><b>Work experience:</b></label> <br />
+          <input type="text" name="work_experience" value="" size="10000"  />
+
 
           <br/> 
           <label ><b>Image:</b></label>

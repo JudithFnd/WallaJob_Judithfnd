@@ -208,10 +208,10 @@
           <div class="row">         
             <div class="col-md-12">
               <div class="breadcrumb-wrapper">
-                <h2 class="product-title">Offer</h2>
+                <h2 class="product-title">My Curriculum</h2>
                 <ol class="breadcrumb">
                   <li><a href="#"><i class="ti-home"></i> Home</a></li>
-                  <li class="current">Offer</li>
+                  <li class="current">My Curriculum</li>
                 </ol>
               </div>
             </div>
@@ -220,79 +220,64 @@
       </div>
       <!-- Page Header End -->   
 
-      <section class="section text-center" >
+      <section class="section" >
       <div class="container">
-       
-        <!-- company data form -->           
+        <br>
+          <h2 class="section-title">Curriculum Vitae
+          <br><br>
+          <ul>
+          <div class="row">               
+          <div class="col-md-12">    
+                <div class="job-list">
+                    <div class="job-list-content">
+                      <div class="col-md-12">    
+                      <li>
+                        <h4 name="name">Name:</h4><hr>                        
+                        <h4 name="surname">Surname</h4><hr>
+                        <h4 name="surname2">Segond Surname</h4><hr>
+                        <h4 name="birthdate">Birthdate</h4><hr>
+                        <h4 name="dni">DNI</h4><hr>
+                        <h4 name="sex">Sex</h4><hr>
+                        <h4 name="country">Country</h4><hr>
+                        <h4 name="city">City</h4><hr>
+                        <h4 name="direction">Direction</h4><hr>
+                        <h4 name="phone_number">Phone number</h4><hr>
+                        
+                      </li> 
+                      </div>
+                    </div>
+                </div>
+              </div>
 
-          <form id="form_login" name="miform" form method="POST" action="/my-company-account/company-offer">
-            {{ csrf_field() }}
-              <h1>Company Offer</h1>
-              <hr>
-              <div class="imgcontainer">
-              </div>            
-              <div class="container">
-                
-            <input type="hidden" name="id_company" value="{{ auth()->user()->id }}"></input>
-
-            <label ><b>Name offer: *</b></label> <br />
-            <input type="text" name="name" value="" size="20" maxlength="60" required/>
-
-            <label ><b>Work schedule: </b></label> <br />
-                <input type="radio" name="work_schedule" value="Full-Time"> Full-Time <br>
-                <input type="radio" name="work_schedule" value="Part-Time" checked> Part-Time <br>         
-            <br/>
-
-            <label ><b>Short description:</b></label> <br />
-            <textarea rows="2" maxlength="255" cols="80" name="short_description"></textarea>
-            <br/>
-
-            <br />
-            <label ><b>Description:</b></label> <br />
-            <textarea rows="4" cols="80" maxlength="100000" name="description"></textarea>
-            <br/>
-
-            <label ><b>Vacancies number: *</b></label> <br />
-
-            <input type="text" name="vacancies" value="" size="50" maxlength="80" required/>
+              
+              </div>
+          </ul>
       
-            <br/>
+        </div>
 
-            <label ><b>Offer Category:</b></label> <br />
-            <select name="id_category"> 
-              @foreach($offerCategories as $offerCategory)
-                <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
-              @endforeach
-            </select>
-            <br/>
-
-            <label ><b>City:</b></label> <br />
-            <input type="text" name="city" value="" size="50" maxlength="80" />
-
-            <br/>
-
-            <label ><b>Offer status: *</b></label> <br />
-              <input type="radio" name="status" value="0"> Off <br>
-              <input type="radio" name="status" value="1" checked> On <br>         
-            
-            <br/>
-
-            <label ><b>Salary:</b></label> <br />
-            <input type="text" name="salary" value="" size="50" maxlength="80" />
-
-            <br/>
-            
-            <br/><br/>
-            <input type="reset" class="btn btn-common btn-large" name="limpiar" value="CANCEL" />
-            <input type="submit" class="btn btn-common btn-large" name="enviar" value="SAVE" />
-
-          </form>
         </div>
       </div>
     </section>  
 
-    @include('footer')
-    @include('scripts')
+           @include('footer')
+        
+    <!-- Main JS  -->
+    <script type="text/javascript" src="{{ asset('js/jquery-min.js') }}"></script>      
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>    
+    <script type="text/javascript" src="{{ asset('js/material.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/material-kit.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.parallax.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.slicknav.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jasny-bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/form-validator.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/contact-form-script.js') }}"></script>    
+    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
       
   </body>
 </html>

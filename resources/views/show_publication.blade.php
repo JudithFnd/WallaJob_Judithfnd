@@ -48,7 +48,7 @@
   <body>  
  @include('navigation_bar')
 
-  <!-- Find Job Section Start -->
+  <!-- show publication Section Start -->
     <section class="find-job section">
         <div class="container">
         <br>

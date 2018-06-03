@@ -1,16 +1,13 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 //Home
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/indexEs', 'IndexEsController@indexEs')->name('indexEs');
@@ -38,7 +35,6 @@ Route::post('/my-company-account/company-data', 'CompanyDataController@store');
 Route::get('/my-company-account/company-offer', 'CompanyOfferController@companyOffer')->name('companyOffer');
 Route::post('/my-company-account/company-offer', 'CompanyOfferController@store');
 
-
 // Offers published
 Route::get('/offers', 'CompanyOfferController@publishedOffers')->name('offers');
 
@@ -53,18 +49,19 @@ Route::get('/offer/inscription/{id}', 'CompanyOfferController@inscribe')->name('
 // Professional account
 Route::post('/my-professional-account', 'AccountsController@accountProfessional')->name('accountProfessional');
 // Currículum
-Route::get('/my-professional-account/my-curriculum', 'CurriculumController@curriculum')->name('curriculum');
-Route::post('/my-professional-account/my-curriculum', 'CurriculumController@store');
+Route::get('/my-professional-account/create-curriculum', 'CurriculumController@curriculum')->name('curriculum');
+Route::post('/my-professional-account/create-curriculum', 'CurriculumController@store');
+Route::get('/my-professional-account/my-curriculum', 'CurriculumController@show')->name('myCurriculum');
 // Publication professional
 Route::get('/my-professional-account/publication-professional', 'PublicationProfessionalController@publicationProfessional')->name('publicationProfessional');
 Route::post('/my-professional-account/publication-professional', 'PublicationProfessionalController@store');
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // Published professionals
 Route::get('/publications', 'PublicationProfessionalController@publishedProfessionals')->name('publications');
 Route::get('/publication/contact-professional/{id}', 'PublicationProfessionalController@contactProfessional')->name('showContact');
 Route::get('/publication/{id}', 'PublicationProfessionalController@show')->name('showPublication');
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // more

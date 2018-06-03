@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\UsersProfessionals;
+use App\Category;
 
 class CurriculumController extends Controller
 {
@@ -32,6 +33,8 @@ class CurriculumController extends Controller
         $userProfessional->city = $request->city;
         $userProfessional->direction = $request->direction;
         $userProfessional->phone_number = $request->phone_number;        
+        $userProfessional->studies = $request->studies;
+        $userProfessional->work_experience = $request->work_experience;
         $userProfessional->image = $request->image;
   
         $userProfessional->save(); 
@@ -39,5 +42,10 @@ class CurriculumController extends Controller
 
         return view('account_professional');       
 
+    }
+
+    public function show()
+    {        
+        return view('my_curriculum');
     }
 }

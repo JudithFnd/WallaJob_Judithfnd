@@ -63,13 +63,33 @@ class CompanyOfferController extends Controller
 
     public function inscribe(Request $request, $offerId)
     { 
-        $inscription = new OfferInscriptions;          
-        $inscription->id_professional =  Auth::user()->userProfessional->id;
-        $inscription->id_offer = $offerId;
-        $inscription->save();
 
-        $request->session()->flash('inscription_status', 'You have been subscribed succesfully');
+        $statusMessage = 'You are already subscribed to this offer';
+        $cssClass = 'alert-danger';
 
+        $user = Auth::user();
+        
+        if ($user->type_user === 1) {
+            $statusMessage = 'Companies cant subscribe to offers';    
+        } else {
+            $professionalUserId = $user->userProfessional->id;
+            $offer = OfferInscriptions::where('id_offer','=', $offerId)
+                                      ->where('id_professional','=', $professionalUserId)
+                                      ->get();
+            
+            if ($offer->isEmpty()) {
+                $inscription = new OfferInscriptions;          
+                $inscription->id_professional =  $professionalUserId;
+                $inscription->id_offer = $offerId;
+                $inscription->save();
+                $statusMessage = 'You have been subscribed succesfully';
+                $cssClass = 'alert-success';
+            } 
+        }       
+
+        $request->session()->flash('inscription_status', $statusMessage);
+        $request->session()->flash('inscription_status_color', $cssClass);
+        
         return redirect()->route('show_offer', ['id' => $offerId]);
     }
 
