@@ -212,7 +212,18 @@
                         <i class="ti-time"></i>
                       </div>
                     </div>
-                 
+                    <div class="col-md-3 col-sm-6">
+                      <div class="search-category-container">
+                        <label class="styled-select">
+                          <select name="id_category" class="dropdown-product selectpicker">
+                          @foreach($offerCategories as $offerCategory)
+                            <option value="{{ $offerCategory->id }}" >{{ $offerCategory->category }}</option> 
+                          @endforeach
+                          </select>
+                        </label>
+                        <br>
+                      </div>
+                    </div>
                     <div class="col-md-1 col-sm-6">
                       <button type="submit" id="search" class="btn btn-search-icon"><i class="ti-search"></i></button>
                     </div>

@@ -226,24 +226,23 @@
           <h2 class="section-title">Curriculum Vitae
           <br><br>
           <ul>
+             
+                      
+         @foreach($subscribedUsersInOffers as $subscribedUser)
           <div class="row">               
-          <div class="col-md-12">    
+            <div class="col-md-12">    
                 <div class="job-list">
                     <div class="job-list-content">
-                      <div class="col-md-12">    
-                      
-                        @foreach($subscribedUsersInOffers as $subscribedUser)
-                          
-                        <li> {{ $subscribedUser->getProfessionalUser->name }}</li> 
-                          
-                        @endforeach
-                      
+                      <div class="col-md-12">  
+                        <li> <h4>{{ $subscribedUser->getProfessionalUser->name }}</h4></li><hr> <br>                        
                       </div>
                     </div>
-                </div>
+                  </div>
+                </div>                    
               </div>
-              
-              </div>
+           @endforeach
+                      
+                     
           </ul>
       
         </div>
