@@ -206,13 +206,13 @@
               <div class="content">
                 <form method="GET" action="{{ route('search') }}">
                   <div class="row">
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-7 col-sm-6">
                       <div class="form-group">
                         <input class="form-control" type="text" name="name" placeholder="job title / keywords / company name">
                         <i class="ti-time"></i>
                       </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-4 col-sm-6">
                       <div class="search-category-container">
                         <label class="styled-select">
                           <select name="id_category" class="dropdown-product selectpicker">
@@ -292,7 +292,7 @@
     <section id="counter">
       <div class="container">
         <div class="row">          
-          <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="counting">
               <div class="icon">
                 <i class="ti-briefcase"></i>
@@ -303,7 +303,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="counting">
               <div class="icon">
                 <i class="ti-user"></i>
@@ -314,7 +314,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="counting">
               <div class="icon">
                 <i class="ti-heart"></i>
